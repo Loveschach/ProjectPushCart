@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class Controller : MonoBehaviour
 {
 	// Walk constants
-	[Header( "Walk constants" )]
+	[Header( "Walk Constants" )]
 	public bool ACCEL_ENABLED = true;
 	public bool DECEL_ENABLED = true;
 	public float GROUND_SPEED = 3;
@@ -30,7 +30,6 @@ public class Controller : MonoBehaviour
 	}
 
 	void UpdateMovement() {
-		Debug.Log( verticalInput );
 		Vector3 forward = transform.forward * verticalInput;
 		Vector3 right = transform.right * horizontalInput;
 		Vector3 move = Vector3.Normalize( forward + right );
