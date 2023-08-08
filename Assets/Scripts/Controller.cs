@@ -5,23 +5,29 @@ using UnityEngine.InputSystem;
 
 public class Controller : MonoBehaviour
 {
-	// Walk constants
-	[Header( "Walk Constants" )]
+	// Drive constants
+	[Header( "Drive Constants" )]
 	public bool ACCEL_ENABLED = true;
-	public bool DECEL_ENABLED = true;
 	public float GROUND_SPEED = 3;
 	public float GROUND_ACCEL = 0.2f;
 	public float GROUND_DECEL = 0.25f;
+	public float BRAKE_DECEL = 0.8f;
+	public float ROTATIONAL_SPEED = 90f;
 
 	// Components
 	public Rigidbody body;
 
+	// Input
 	public InputAction moveAction;
 	float verticalInput;
 	float horizontalInput;
 
+	// Drive Members
+	float currentSpeed;
+
 	private void Start() {
 		moveAction.Enable();
+		currentSpeed = 0;
 	}
 
 	void UpdateInput() {
@@ -42,11 +48,38 @@ public class Controller : MonoBehaviour
 		}
 	}
 
+	void UpdateAccelerator() {
+		float accelerationConstant = GROUND_ACCEL;
+		if ( verticalInput < 0 && body.velocity.z > 0 ) {
+			accelerationConstant = BRAKE_DECEL;
+		}
+		else if ( verticalInput == 0 ) {
+			accelerationConstant = GROUND_DECEL;
+		}
+		float targetSpeed = Mathf.Max( Mathf.Min( currentSpeed + ( accelerationConstant * verticalInput * Time.deltaTime ), GROUND_SPEED ), -GROUND_SPEED );
+		currentSpeed = targetSpeed;
+		Vector3 move = transform.forward * targetSpeed;
+		body.MovePosition( transform.position + move );
+	}
+
+	void UpdateRotation() {
+		float newAngle = horizontalInput * ROTATIONAL_SPEED * Time.deltaTime;
+		Quaternion rotQuat = Quaternion.AngleAxis( newAngle, Vector3.up );
+		transform.rotation *= rotQuat;
+	}
+
 	void Update() {
 		UpdateInput();
 	}
 
 	private void FixedUpdate() {
-		UpdateMovement();
+		if ( ACCEL_ENABLED ) {
+			UpdateAccelerator();
+			UpdateRotation();
+		}
+
+		else {
+			UpdateMovement();
+		}	
 	}
 }
