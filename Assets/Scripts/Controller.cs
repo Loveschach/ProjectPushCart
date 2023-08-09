@@ -8,7 +8,8 @@ public class Controller : MonoBehaviour
 	// Drive constants
 	[Header( "Drive Constants" )]
 	public bool ACCEL_ENABLED = true;
-	public float GROUND_SPEED = 3;
+	public float MAX_GROUND_SPEED = 0.3f;
+	public float MAX_REVERSE_SPEED = 0.1f;
 	public float GROUND_ACCEL = 0.2f;
 	public float GROUND_DECEL = 0.25f;
 	public float BRAKE_DECEL = 0.8f;
@@ -39,7 +40,7 @@ public class Controller : MonoBehaviour
 		Vector3 forward = transform.forward * verticalInput;
 		Vector3 right = transform.right * horizontalInput;
 		Vector3 move = Vector3.Normalize( forward + right );
-		Vector3 adjustedMove = move * GROUND_SPEED * Time.deltaTime;
+		Vector3 adjustedMove = move * MAX_GROUND_SPEED * Time.deltaTime;
 		if ( horizontalInput == 0 && verticalInput == 0 ) {
 			body.velocity = new Vector3( 0, body.velocity.y, 0 );
 		}
@@ -56,7 +57,7 @@ public class Controller : MonoBehaviour
 		else if ( verticalInput == 0 ) {
 			accelerationConstant = GROUND_DECEL;
 		}
-		float targetSpeed = Mathf.Max( Mathf.Min( currentSpeed + ( accelerationConstant * verticalInput * Time.deltaTime ), GROUND_SPEED ), -GROUND_SPEED );
+		float targetSpeed = Mathf.Max( Mathf.Min( currentSpeed + ( accelerationConstant * verticalInput * Time.deltaTime ), MAX_GROUND_SPEED ), -MAX_REVERSE_SPEED );
 		currentSpeed = targetSpeed;
 		Vector3 move = transform.forward * targetSpeed;
 		body.MovePosition( transform.position + move );
