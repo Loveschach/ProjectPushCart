@@ -28,6 +28,7 @@ public class CartController : MonoBehaviour
     public float casterSwivelSpeed;
     public float casterOffset;
     public Vector3 leftCasterDirection, rightCasterDirection;
+    public float turningForce;
 
     public GameObject leftHandPos, rightHandPos;
     public GameObject frontLeftWheelPos, frontRightWheelPos, rearLeftWheelPos, rearRightWheelPos;
@@ -36,7 +37,7 @@ public class CartController : MonoBehaviour
     StepSide currentSide = StepSide.Left;
     float stepTimer = 0;
 
-
+    public ParticleSystem pushAnimVfx;
 
     private void Start()
     {
@@ -132,20 +133,59 @@ public class CartController : MonoBehaviour
 
     void DoStep(StepSide side)
     {
+        /*
+        var turn = Input.GetAxis("Turning");
+        // can have two ways to turn, apply friction to one side, or apply less force when stepping.
+
+        if(side == StepSide.Left && turn < 0)
+        {
+            turn = Mathf.Abs(turn);
+        }
+
+        if (side == StepSide.Right && turn < 0)
+        {
+            turn = 0;
+        }
+
+        if (side == StepSide.Right && turn > 0)
+        {
+            turn = Mathf.Abs(turn);
+        }
+
+        if (side == StepSide.Left && turn > 0)
+        {
+            turn = 0;
+        }
+
+        */
+
+
         var forcePos = side == StepSide.Left ? leftHandPos.transform.position : rightHandPos.transform.position;
         var force = transform.forward * stepStrength;
         rb.AddForceAtPosition(force, forcePos, ForceMode.Impulse);
-        //Debug.DrawRay(forcePos, force, Color.red, 1);
+
+
+        ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams();
+        emitParams.position = forcePos;
+        pushAnimVfx.Emit(emitParams, 1);
+    }
+
+
+
+    void ApplyTurning()
+    {
+        var turn = Input.GetAxis("Turning");
+        rb.AddTorque(Vector3.up * turn * turningForce);
     }
 
     void FixedUpdate()
     {
-
-
         ApplyWheelFriction(WheelPosition.FrontLeft);
         ApplyWheelFriction(WheelPosition.FrontRight);
         ApplyWheelFriction(WheelPosition.RearLeft);
         ApplyWheelFriction(WheelPosition.RearRight);
+        ApplyTurning();
+
 
         if (Input.GetButton("Step"))
         {
