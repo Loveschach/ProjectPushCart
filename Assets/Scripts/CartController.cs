@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public enum StepSide
@@ -21,7 +22,8 @@ public enum WheelPosition
 
 public class CartController : MonoBehaviour
 {
-
+    // Cart constants
+    [Header( "Cart Constants" )]
     public float stepStrength;
     public float stepTime;
     public float rollingFriction, slidingFriction;
@@ -30,19 +32,28 @@ public class CartController : MonoBehaviour
     public Vector3 leftCasterDirection, rightCasterDirection;
     public float turningForce;
 
-    public GameObject leftHandPos, rightHandPos;
+    // Cart components
+    [Header( "Cart Components" )]
+    public GameObject leftHandPos;
+    public GameObject rightHandPos;
     public GameObject frontLeftWheelPos, frontRightWheelPos, rearLeftWheelPos, rearRightWheelPos;
     public Rigidbody rb;
+    public ParticleSystem pushAnimVfx;
+
+    // Input
+    [Header( "Input Actions" )]
+    public InputAction stepAction;
+    public InputAction turnAction;
 
     StepSide currentSide = StepSide.Left;
     float stepTimer = 0;
-
-    public ParticleSystem pushAnimVfx;
 
     private void Start()
     {
         leftCasterDirection = transform.forward;
         rightCasterDirection = transform.forward;
+        stepAction.Enable();
+        turnAction.Enable();
     }
 
     float GetWeightOnWheel(WheelPosition wheel)
@@ -174,7 +185,7 @@ public class CartController : MonoBehaviour
 
     void ApplyTurning()
     {
-        var turn = Input.GetAxis("Turning");
+        var turn = turnAction.ReadValue<float>();
         rb.AddTorque(Vector3.up * turn * turningForce);
     }
 
@@ -187,7 +198,7 @@ public class CartController : MonoBehaviour
         ApplyTurning();
 
 
-        if (Input.GetButton("Step"))
+        if (stepAction.ReadValue<float>() > 0)
         {
             stepTimer -= Time.fixedDeltaTime;
 
