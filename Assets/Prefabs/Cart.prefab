@@ -317,6 +317,14 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Step
       m_Flags: 0
+    - m_Name: 
+      m_Id: ca19bde9-994a-4a2a-8105-5f7558a6e9e9
+      m_Path: <Gamepad>/buttonSouth
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Step
+      m_Flags: 0
     m_Flags: 0
   turnAction:
     m_Name: Turn
@@ -345,6 +353,30 @@ MonoBehaviour:
     - m_Name: positive
       m_Id: 95ca0481-d1be-409f-b387-d05314c387d1
       m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn
+      m_Flags: 8
+    - m_Name: 1D Axis
+      m_Id: 893f389d-e9df-4e81-9c71-fcc6dd1e6ee2
+      m_Path: 1DAxis
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn
+      m_Flags: 4
+    - m_Name: negative
+      m_Id: 0c9bf66a-b58e-4bd8-8a46-89248e48953e
+      m_Path: <Gamepad>/leftStick/right
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Turn
+      m_Flags: 8
+    - m_Name: positive
+      m_Id: 41e530da-b842-4782-9793-0e3fdbac1a32
+      m_Path: <Gamepad>/leftStick/left
       m_Interactions: 
       m_Processors: 
       m_Groups: 
