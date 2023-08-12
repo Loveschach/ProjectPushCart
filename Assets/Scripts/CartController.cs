@@ -25,6 +25,7 @@ public class CartController : MonoBehaviour
     // Cart constants
     [Header( "Cart Constants" )]
     public float stepStrength;
+    public float brakeStrength;
     public float stepTime;
     public float rollingFriction, slidingFriction;
     public float casterSwivelSpeed;
@@ -44,6 +45,7 @@ public class CartController : MonoBehaviour
     [Header( "Input Actions" )]
     public InputAction stepAction;
     public InputAction turnAction;
+    public InputAction brakeAction;
 
     StepSide currentSide = StepSide.Left;
     float stepTimer = 0;
@@ -54,6 +56,7 @@ public class CartController : MonoBehaviour
         rightCasterDirection = transform.forward;
         stepAction.Enable();
         turnAction.Enable();
+        brakeAction.Enable();
     }
 
     float GetWeightOnWheel(WheelPosition wheel)
@@ -109,7 +112,7 @@ public class CartController : MonoBehaviour
         } 
         else
         {
-            // front wheels are aligned with a certain direciton because they are on casters.
+            // front wheels are aligned with a certain direction because they are on casters.
             var wheelDirection = wheel == WheelPosition.FrontLeft ? leftCasterDirection : rightCasterDirection;
             var wheelPos = GetWheelPosition(wheel);
             var normalForce = GetWeightOnWheel(wheel);
@@ -142,6 +145,20 @@ public class CartController : MonoBehaviour
         }
     }
 
+    void ApplySideForce( StepSide side, float strength ) {
+        var forcePos = side == StepSide.Left ? leftHandPos.transform.position : rightHandPos.transform.position;
+        var force = transform.forward * strength;
+        rb.AddForceAtPosition( force, forcePos, ForceMode.Impulse );
+
+        ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams();
+        emitParams.position = forcePos;
+        pushAnimVfx.Emit( emitParams, 1 );
+    }
+
+    void DoBrakeStep( StepSide side ) {
+        ApplySideForce( side, -1 * brakeStrength );
+    }
+
     void DoStep(StepSide side)
     {
         /*
@@ -171,14 +188,7 @@ public class CartController : MonoBehaviour
         */
 
 
-        var forcePos = side == StepSide.Left ? leftHandPos.transform.position : rightHandPos.transform.position;
-        var force = transform.forward * stepStrength;
-        rb.AddForceAtPosition(force, forcePos, ForceMode.Impulse);
-
-
-        ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams();
-        emitParams.position = forcePos;
-        pushAnimVfx.Emit(emitParams, 1);
+        ApplySideForce( side, stepStrength );
     }
 
 
@@ -197,14 +207,18 @@ public class CartController : MonoBehaviour
         ApplyWheelFriction(WheelPosition.RearRight);
         ApplyTurning();
 
-
-        if (stepAction.ReadValue<float>() > 0)
-        {
+        var stepping = stepAction.ReadValue<float>() > 0;
+        var braking = brakeAction.ReadValue<float>() > 0;
+        if (stepping || braking ) {
             stepTimer -= Time.fixedDeltaTime;
 
             if(stepTimer < 0)
             {
-                DoStep(currentSide);
+                if ( stepping )
+                    DoStep( currentSide );
+                else if ( braking )
+                    DoBrakeStep( currentSide );
+
                 stepTimer = stepTime;
                 currentSide = currentSide == StepSide.Left ? StepSide.Right : StepSide.Left;
 

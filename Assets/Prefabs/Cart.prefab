@@ -285,6 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stepStrength: 1
+  brakeStrength: 0.5
   stepTime: 0.3
   rollingFriction: 1
   slidingFriction: 5
@@ -382,6 +383,31 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Turn
       m_Flags: 8
+    m_Flags: 0
+  brakeAction:
+    m_Name: Brake
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b1694d53-8a19-463f-aad8-a9ce8a98d4db
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: c08d51ab-235a-4fe9-a18b-5de0d3eaa6fa
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Brake
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 55b39efa-840a-4357-a1c9-19038da2485f
+      m_Path: <Gamepad>/buttonEast
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Brake
+      m_Flags: 0
     m_Flags: 0
 --- !u!1 &4952783593290858253
 GameObject:
