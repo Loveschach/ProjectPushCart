@@ -13,7 +13,8 @@ public class TriggerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        managedTriggers = managedTriggers.OrderBy( x => Random.Range( 0, 1 ) ).ToArray();
+        Random.InitState( System.DateTime.Now.Millisecond );
+        managedTriggers = managedTriggers.OrderBy( x => Random.Range( 0, managedTriggers.Length ) ).ToArray();
         ChooseNextTrigger();
         hitFoodTrigger.AddListener( ChooseNextTrigger );
     }
