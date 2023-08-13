@@ -25,7 +25,7 @@ MonoBehaviour:
         Key: Key_0
         Type: 1
         GameObject: {fileID: 919132149155446097, guid: e66215838c4ae1b4f9da535bc2910326, type: 3}
-        WidthUnits: 9
+        WidthUnits: 1
         HeightUnits: 1
     - rid: 3803732189435396097
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}

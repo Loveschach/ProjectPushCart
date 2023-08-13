@@ -39,7 +39,7 @@ MonoBehaviour:
         Description: Milk with purple label
         Type: 1
         LabelTexture: {fileID: 0}
-        ProductColor: {r: 1, g: 0, b: 0.9183836, a: 0}
+        ProductColor: {r: 0.3584906, g: 0.015218933, b: 0.3302211, a: 0}
         Odds: 2
     - rid: 3803732184768184324
       type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
@@ -69,5 +69,5 @@ MonoBehaviour:
         Description: Milk with purple label
         Type: 2
         LabelTexture: {fileID: 0}
-        ProductColor: {r: 1, g: 0, b: 0.91764706, a: 0}
+        ProductColor: {r: 0.35686275, g: 0.015686275, b: 0.32941177, a: 0}
         Odds: 1
