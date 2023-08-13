@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 038ea18907b99da4286b00fcdfeec2ab
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121783
+  packageName: Simple Data Tables
+  packageVersion: 4.0
+  assetPath: Assets/SimpleDataTables/Editor/StyleOverridePopup.cs
+  uploadId: 354814

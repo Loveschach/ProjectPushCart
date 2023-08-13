@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: bac420aa6ecbf7a44854ed4da4c2feee
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121783
+  packageName: Simple Data Tables
+  packageVersion: 4.0
+  assetPath: Assets/SimpleDataTables/Example/DatatableExampleScene.unity
+  uploadId: 354814

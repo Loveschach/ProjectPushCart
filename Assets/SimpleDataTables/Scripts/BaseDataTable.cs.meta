@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b9e441dab31a4d149976295513fc7bb0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121783
+  packageName: Simple Data Tables
+  packageVersion: 4.0
+  assetPath: Assets/SimpleDataTables/Scripts/BaseDataTable.cs
+  uploadId: 354814

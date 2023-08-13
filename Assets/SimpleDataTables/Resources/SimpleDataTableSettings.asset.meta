@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 74b50078f1e88314c90b29613613bc72
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121783
+  packageName: Simple Data Tables
+  packageVersion: 4.0
+  assetPath: Assets/SimpleDataTables/Resources/SimpleDataTableSettings.asset
+  uploadId: 354814

@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96a11c4d99e9ab479c9edf3998ee015, type: 3}
+  m_Name: ExampleItemTable(Template)
+  m_EditorClassIdentifier: 
+  columns:
+  - DataType: Key
+    CustomDataType: 
+    Name: Key
+    ColumnColor: {r: 1, g: 1, b: 1, a: 0}
+    ColumnWidth: 100
+    selected: 0
+  - DataType: int
+    CustomDataType: 
+    Name: ItemID
+    ColumnColor: {r: 0.097670645, g: 0.6037736, b: 0, a: 1}
+    ColumnWidth: 60
+    selected: 0
+  - DataType: string
+    CustomDataType: 
+    Name: DisplayName
+    ColumnColor: {r: 1, g: 0, b: 0.854969, a: 1}
+    ColumnWidth: 60
+    selected: 1
+  - DataType: string
+    CustomDataType: 
+    Name: Description
+    ColumnColor: {r: 1, g: 0, b: 0.854969, a: 1}
+    ColumnWidth: 60
+    selected: 1
+  - DataType: GameObject
+    CustomDataType: 
+    Name: Model
+    ColumnColor: {r: 0, g: 0.09575987, b: 1, a: 1}
+    ColumnWidth: 60
+    selected: 10
+  - DataType: Texture2D
+    CustomDataType: 
+    Name: InventorIcon
+    ColumnColor: {r: 0.17068174, g: 0, b: 0.6415094, a: 1}
+    ColumnWidth: 60
+    selected: 14
+  - DataType: Color
+    CustomDataType: 
+    Name: InventoryBackgroundColor
+    ColumnColor: {r: 0.3058473, g: 0.745283, b: 0.6872009, a: 1}
+    ColumnWidth: 200
+    selected: 11
+  - DataType: bool
+    CustomDataType: 
+    Name: Stackable
+    ColumnColor: {r: 1, g: 0, b: 0, a: 1}
+    ColumnWidth: 60
+    selected: 3
+  - DataType: int
+    CustomDataType: 
+    Name: MaxStackSize
+    ColumnColor: {r: 0.097670645, g: 0.6037736, b: 0, a: 1}
+    ColumnWidth: 60
+    selected: 0
+  - DataType: Vector3
+    CustomDataType: 
+    Name: DisplayRotation
+    ColumnColor: {r: 1, g: 0.9450981, b: 0, a: 1}
+    ColumnWidth: 90
+    selected: 8
+  columnsSetName: ExampleItemTable

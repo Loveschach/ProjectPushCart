@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96a11c4d99e9ab479c9edf3998ee015, type: 3}
+  m_Name: ExamplePersonTable(Template)
+  m_EditorClassIdentifier: 
+  columns:
+  - DataType: Key
+    CustomDataType: 
+    Name: Key
+    ColumnColor: {r: 1, g: 1, b: 1, a: 0}
+    ColumnWidth: 100
+    selected: 0
+  - DataType: string
+    CustomDataType: 
+    Name: Name
+    ColumnColor: {r: 1, g: 0, b: 0.854969, a: 1}
+    ColumnWidth: 60
+    selected: 1
+  - DataType: int
+    CustomDataType: 
+    Name: Age
+    ColumnColor: {r: 0.097670645, g: 0.6037736, b: 0, a: 1}
+    ColumnWidth: 60
+    selected: 0
+  - DataType: bool
+    CustomDataType: 
+    Name: HasPet
+    ColumnColor: {r: 1, g: 0, b: 0, a: 1}
+    ColumnWidth: 60
+    selected: 3
+  - DataType: Color
+    CustomDataType: 
+    Name: HairColor
+    ColumnColor: {r: 0.3058473, g: 0.745283, b: 0.6872009, a: 1}
+    ColumnWidth: 200
+    selected: 11
+  - DataType: Custom
+    CustomDataType: DataTable
+    Name: Column5
+    ColumnColor: {r: 1, g: 1, b: 1, a: 1}
+    ColumnWidth: 60
+    selected: 19
+  columnsSetName: ExamplePersonTable

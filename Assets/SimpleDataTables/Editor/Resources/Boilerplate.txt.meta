@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 8ea94fd7e2f09b9488b8028e5812d5c7
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121783
+  packageName: Simple Data Tables
+  packageVersion: 4.0
+  assetPath: Assets/SimpleDataTables/Editor/Resources/Boilerplate.txt
+  uploadId: 354814

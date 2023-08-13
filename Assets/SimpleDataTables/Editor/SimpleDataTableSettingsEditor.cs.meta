@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: bf52c65380f2812498017436c987271c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121783
+  packageName: Simple Data Tables
+  packageVersion: 4.0
+  assetPath: Assets/SimpleDataTables/Editor/SimpleDataTableSettingsEditor.cs
+  uploadId: 354814

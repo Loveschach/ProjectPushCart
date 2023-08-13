@@ -1,0 +1,28 @@
+/*
+ * This is an automaticly generated class. 
+ * DO NOT EDIT raw text
+ */
+
+using System.Reflection;
+using UnityEngine;
+
+[CreateAssetMenu(menuName = "Simple Data Tables/Create Instance/BoilerPlateNameOfTable")]
+public class DataTable_BoilerPlateNameOfTable: DataTable
+{
+	public override Color[] NewColumnColors { get; set; } = new Color[]{BoilerPlateColors};
+	public override int[] NewColumnWidths { get; set; } = {BoilerPlateWidths};
+
+	public override void Add(string NewKey)
+	{
+		Rows.Add(new DataTableRow_BoilerPlateNameOfTable(){ Key = NewKey });
+	}
+	public override FieldInfo[] GetVariableList(BindingFlags bindingFlags)
+	{
+		return typeof(DataTableRow_BoilerPlateNameOfTable).GetFields(bindingFlags);
+	}
+}
+[System.Serializable]
+public class DataTableRow_BoilerPlateNameOfTable: DataTableRow
+{
+BoilerPlateRowAttributes
+}

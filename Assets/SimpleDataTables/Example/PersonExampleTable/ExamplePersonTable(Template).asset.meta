@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9236134b67345d04eada1169eb049650
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121783
+  packageName: Simple Data Tables
+  packageVersion: 4.0
+  assetPath: Assets/SimpleDataTables/Example/PersonExampleTable/ExamplePersonTable(Template).asset
+  uploadId: 354814

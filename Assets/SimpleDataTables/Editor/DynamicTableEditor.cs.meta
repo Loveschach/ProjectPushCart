@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 0bf922b26853db9418614c5f3f064d63
+timeCreated: 1529373370
+licenseType: Store
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 121783
+  packageName: Simple Data Tables
+  packageVersion: 4.0
+  assetPath: Assets/SimpleDataTables/Editor/DynamicTableEditor.cs
+  uploadId: 354814
