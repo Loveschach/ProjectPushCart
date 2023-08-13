@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96a11c4d99e9ab479c9edf3998ee015, type: 3}
+  m_Name: ProductTypeTable(Template)
+  m_EditorClassIdentifier: 
+  columns:
+  - DataType: Key
+    CustomDataType: 
+    Name: Key
+    ColumnColor: {r: 1, g: 1, b: 1, a: 0}
+    ColumnWidth: 100
+    selected: 0
+  - DataType: Custom
+    CustomDataType: ProductTypes
+    Name: Type
+    ColumnColor: {r: 0.99215686, g: 0.6, b: 0.03137255, a: 1}
+    ColumnWidth: 100
+    selected: 19
+  - DataType: GameObject
+    CustomDataType: 
+    Name: GameObject
+    ColumnColor: {r: 0.097670645, g: 0.6037736, b: 0, a: 1}
+    ColumnWidth: 200
+    selected: 10
+  - DataType: int
+    CustomDataType: 
+    Name: WidthUnits
+    ColumnColor: {r: 0.6039216, g: 0, b: 0.45927832, a: 1}
+    ColumnWidth: 60
+    selected: 0
+  - DataType: int
+    CustomDataType: 
+    Name: HeightUnits
+    ColumnColor: {r: 0.3773585, g: 0, b: 0.36437395, a: 1}
+    ColumnWidth: 60
+    selected: 0
+  columnsSetName: ProductTypeTable

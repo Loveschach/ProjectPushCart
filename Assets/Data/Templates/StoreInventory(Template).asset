@@ -35,7 +35,7 @@ MonoBehaviour:
     CustomDataType: ProductTypes
     Name: Type
     ColumnColor: {r: 0.990566, g: 0.5994907, b: 0.032707386, a: 1}
-    ColumnWidth: 60
+    ColumnWidth: 100
     selected: 19
   - DataType: Texture2D
     CustomDataType: 

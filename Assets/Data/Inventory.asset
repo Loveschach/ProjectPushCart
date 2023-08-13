@@ -56,7 +56,7 @@ MonoBehaviour:
       data:
         Key: Key_4
         Name: Purple Milk
-        Description: 
+        Description: Gallon of milk witha purple label
         Type: 3
         LabelTexture: {fileID: 0}
         ProductColor: {r: 1, g: 0, b: 0.91764706, a: 0}
@@ -65,9 +65,9 @@ MonoBehaviour:
       type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
       data:
         Key: Key_2
-        Name: 
-        Description: 
+        Name: Galaxy Milk (Quart)
+        Description: Milk with purple label
         Type: 2
         LabelTexture: {fileID: 0}
-        ProductColor: {r: 0, g: 0, b: 0, a: 0}
-        Odds: 0
+        ProductColor: {r: 1, g: 0, b: 0.91764706, a: 0}
+        Odds: 1
