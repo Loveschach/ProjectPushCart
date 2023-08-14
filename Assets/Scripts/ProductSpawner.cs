@@ -3,11 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Splines;
 
 public class ProductSpawner : MonoBehaviour
 {
 	public Transform _endPos;
-	public GameObject _spline;
+	//public GameObject _spline;
+	//public SplineInstantiate _splineInstantiate;
 
 	// TODO: Move this to a "store" object
 	public DataTable_StoreInventory _inventory;
@@ -18,6 +20,7 @@ public class ProductSpawner : MonoBehaviour
 
 	public ProductTypes[] _types;
 
+	public int _amountOfRows = 1;
 	public float _rotationOffsetMin = 0.0f;
 	public float _rotationOffsetMax = 0.0f;
 
@@ -49,6 +52,9 @@ public class ProductSpawner : MonoBehaviour
 		_spawnDistance = _spawnDirection.magnitude;
 		_spawnDirection.Normalize();
 		_shelfSpots = (int)MathF.Round(_spawnDistance / (_gridScale + _gridGap));
+
+		//var splineComponent = _spline.GetComponent<Spline>();
+		//splineComponent.Evaluate(0.5f, out position, out target, out up);
 	}
 
 	void SpawnProducts()
@@ -107,23 +113,32 @@ public class ProductSpawner : MonoBehaviour
 
 					Quaternion productQuat = new Quaternion(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z, 1.0f);
 
-					GameObject newProduct = Instantiate(typeDefinition.GameObject, productPos, productQuat);
-					newProduct.transform.localScale = new Vector3(_productScale, _productScale, _productScale);
-
-					var productRenderer = newProduct.GetComponent<Renderer>();
-					productRenderer.materials[1].SetColor("_Color", row.ProductColor);
-					/*
-					foreach (var mat in productRenderer.materials)
+					for (int j = 0; j < _amountOfRows; j++)
 					{
-						if(mat.name.Contains("Blue") || mat.name.Contains("White"))
+						Vector3 thisProductPos = productPos;
+						thisProductPos += transform.forward * typeDefinition.WidthUnits * -(_gridScale + _gridGap) * j;
+
+						GameObject newProduct = Instantiate(typeDefinition.GameObject, thisProductPos, productQuat);
+						newProduct.transform.localScale = new Vector3(_productScale, _productScale, _productScale);
+
+						var productRenderer = newProduct.GetComponent<Renderer>();
+						productRenderer.materials[1].SetColor("_Color", row.ProductColor);
+						/*
+						foreach (var mat in productRenderer.materials)
 						{
-							mat.SetColor("_Color", row.ProductColor);
+							if(mat.name.Contains("Blue") || mat.name.Contains("White"))
+							{
+								mat.SetColor("_Color", row.ProductColor);
+							}
+						}
+						*/
+						//string result = productRenderer.materials[1].GetTag("label", true, "Nothing");
+
+						if (j == 0)
+						{
+							productsOfType.Add(newProduct);
 						}
 					}
-					*/
-					//string result = productRenderer.materials[1].GetTag("label", true, "Nothing");
-
-					productsOfType.Add(newProduct);
 
 					lastProductWidth = productWidth;
 				}

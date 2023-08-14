@@ -319,6 +319,7 @@ MonoBehaviour:
   _gridGap: 0
   _productScale: 0.2
   _types: 
+  _amountOfRows: 1
   _rotationOffsetMin: 0
   _rotationOffsetMax: 0
   _triggerDepth: 2
