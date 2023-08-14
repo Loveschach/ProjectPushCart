@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 2647119002800627412}
   m_Layer: 0
   m_Name: Spline
-  m_TagString: Untagged
+  m_TagString: EditorOnly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5214641814616939662
 Transform:
   m_ObjectHideFlags: 0
@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _endPos: {fileID: 7343227654342258484}
+  _spline: {fileID: 2315817878659815518}
   _inventory: {fileID: 11400000, guid: 0ac8b7a9cf01b3848b13d87f86cc6204, type: 2}
   _typeDefinitions: {fileID: 11400000, guid: 744060abdc56c424ead0f1302627eda6, type: 2}
   _gridScale: 0.1
@@ -320,3 +321,5 @@ MonoBehaviour:
   _types: 
   _rotationOffsetMin: 0
   _rotationOffsetMax: 0
+  _triggerDepth: 2
+  _triggerHeight: 4

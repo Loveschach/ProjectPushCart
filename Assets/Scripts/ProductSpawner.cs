@@ -2,10 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ProductSpawner : MonoBehaviour
 {
 	public Transform _endPos;
+	public GameObject _spline;
 
 	// TODO: Move this to a "store" object
 	public DataTable_StoreInventory _inventory;
@@ -19,9 +21,14 @@ public class ProductSpawner : MonoBehaviour
 	public float _rotationOffsetMin = 0.0f;
 	public float _rotationOffsetMax = 0.0f;
 
+	public float _triggerDepth = 2.0f;
+	public float _triggerHeight = 4.0f;
+
 	private Vector3 _spawnDirection = Vector3.right;
 	private float _spawnDistance = 0.0f;
 	private int _shelfSpots = 0;
+
+	public List<List<GameObject>> _productsSpawned = new List<List<GameObject>>();
 
 	private void OnValidate()
 	{
@@ -69,20 +76,33 @@ public class ProductSpawner : MonoBehaviour
 
 		Vector3 productPos = transform.position;
 
+		int productWidth = -1;
+		int lastProductWidth = -1;
+
 		foreach (var row in rows)
 		{
 			DataTableRow_ProductTypeTable typeDefinition;
 			if( GetTypeDefinition(row.Type, out typeDefinition) )
 			{
-				float myWeight = row.Odds / totalWeight;
+				List<GameObject> productsOfType = new List<GameObject>();
 
+				lastProductWidth = productWidth;
+				productWidth = typeDefinition.WidthUnits;
+
+				float myWeight = row.Odds / totalWeight;
 				int amountToSpawn = (int)Math.Round(myWeight * _shelfSpots);
-				amountToSpawn /= typeDefinition.WidthUnits;
+				amountToSpawn /= productWidth;
 				amountToSpawn = Math.Max(amountToSpawn, 1);
 
 				for (int i = 0; i < amountToSpawn; i++)
 				{
-					float nextSpotDist = (_gridScale + _gridGap) * typeDefinition.WidthUnits;
+					float nextSpotDist = _gridGap;
+					nextSpotDist += _gridScale * (float)productWidth * 0.5f;
+					if (lastProductWidth != -1)
+					{
+						nextSpotDist += _gridScale * (float)lastProductWidth * 0.5f;
+					}
+
 					productPos += _spawnDirection * nextSpotDist;
 
 					Quaternion productQuat = new Quaternion(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z, 1.0f);
@@ -102,10 +122,34 @@ public class ProductSpawner : MonoBehaviour
 					}
 					*/
 					//string result = productRenderer.materials[1].GetTag("label", true, "Nothing");
-					
+
+					productsOfType.Add(newProduct);
+
+					lastProductWidth = productWidth;
 				}
+
+				_productsSpawned.Add(productsOfType);
+
+				Vector3 midPoint = productsOfType[0].transform.position + productsOfType[productsOfType.Count - 1].transform.position;
+				float width = Vector3.Distance(productsOfType[0].transform.position, productsOfType[productsOfType.Count - 1].transform.position);
+				width += _gridScale * productWidth;
+				midPoint *= 0.5f;
+				midPoint += productsOfType[0].transform.forward * 0.5f * _triggerDepth;
+
+				BoxCollider boxCollider = gameObject.AddComponent(typeof(BoxCollider)) as BoxCollider;
+				//BoxCollider boxCollider = productsOfType[0].AddComponent(typeof(BoxCollider)) as BoxCollider;
+				boxCollider.isTrigger = true;
+				//boxCollider.center = productsOfType[0].transform.InverseTransformPoint(midPoint);
+				boxCollider.center = transform.InverseTransformPoint(midPoint);
+				boxCollider.size = new Vector3(width, _triggerHeight, _triggerDepth);
+				//boxCollider.size /= _productScale;
 			}
 		}
+	}
+	private void OnTriggerEnter(Collider other)
+	{
+		var speed = 1;
+		speed++;
 	}
 
 	// Update is called once per frame
@@ -128,17 +172,18 @@ public class ProductSpawner : MonoBehaviour
 	{
 		InitSpawnVars();
 
-		Gizmos.color = new Color(0.0f, 0.9f, 0.25f, 1.0f);
+		Gizmos.color = new Color(0.9f, 0.0f, 0.25f, 1.0f);
 
+		Vector3 sd = transform.InverseTransformDirection(_spawnDirection);
 		Vector3 gridPos = Vector3.zero;
 		gridPos.y += _gridScale * 0.5f;
+		gridPos += sd * _gridScale * 0.5f;
 
-		for(int i = 0; i < _shelfSpots; i++)
+		for (int i = 0; i < _shelfSpots; i++)
 		{
 			Gizmos.matrix = transform.localToWorldMatrix;
 			Gizmos.DrawWireCube(gridPos, new Vector3(_gridScale, _gridScale, _gridScale));
 
-			Vector3 sd = transform.InverseTransformDirection(_spawnDirection);
 			float nextSpotDist = _gridScale + _gridGap;
 			gridPos += sd * nextSpotDist;
 		}
