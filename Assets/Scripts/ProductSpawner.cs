@@ -5,6 +5,22 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Splines;
 
+// This is a simple 
+public class ProductGrabTrigger : MonoBehaviour
+{
+
+	private void OnTriggerEnter(Collider other)
+	{
+		var speed = 1;
+		speed++;
+	}
+	private void OnTriggerExit(Collider other)
+	{
+		var speed = 1;
+		speed++;
+	}
+}
+
 public class ProductSpawner : MonoBehaviour
 {
 	public Transform _endPos;
@@ -145,26 +161,12 @@ public class ProductSpawner : MonoBehaviour
 
 				_productsSpawned.Add(productsOfType);
 
-				Vector3 midPoint = productsOfType[0].transform.position + productsOfType[productsOfType.Count - 1].transform.position;
-				float width = Vector3.Distance(productsOfType[0].transform.position, productsOfType[productsOfType.Count - 1].transform.position);
-				width += _gridScale * productWidth;
-				midPoint *= 0.5f;
-				midPoint += productsOfType[0].transform.forward * 0.5f * _triggerDepth;
+				AddProductTrigger(productsOfType[0], productsOfType[productsOfType.Count - 1], productWidth);
 
-				BoxCollider boxCollider = gameObject.AddComponent(typeof(BoxCollider)) as BoxCollider;
-				//BoxCollider boxCollider = productsOfType[0].AddComponent(typeof(BoxCollider)) as BoxCollider;
-				boxCollider.isTrigger = true;
-				//boxCollider.center = productsOfType[0].transform.InverseTransformPoint(midPoint);
-				boxCollider.center = transform.InverseTransformPoint(midPoint);
-				boxCollider.size = new Vector3(width, _triggerHeight, _triggerDepth);
-				//boxCollider.size /= _productScale;
+				ProductGrabTrigger productGrabTrigger = productsOfType[0].AddComponent(typeof(ProductGrabTrigger)) as ProductGrabTrigger;
+
 			}
 		}
-	}
-	private void OnTriggerEnter(Collider other)
-	{
-		var speed = 1;
-		speed++;
 	}
 
 	// Update is called once per frame
@@ -202,6 +204,23 @@ public class ProductSpawner : MonoBehaviour
 			float nextSpotDist = _gridScale + _gridGap;
 			gridPos += sd * nextSpotDist;
 		}
+	}
+
+	private void AddProductTrigger(GameObject firstProduct, GameObject lastProduct, float productWidth)
+	{
+		BoxCollider boxCollider = firstProduct.AddComponent(typeof(BoxCollider)) as BoxCollider;
+
+		Vector3 midPoint = firstProduct.transform.position + lastProduct.transform.position;
+		midPoint *= 0.5f;
+		midPoint += firstProduct.transform.forward * 0.5f * _triggerDepth;
+
+		float width = Vector3.Distance(firstProduct.transform.position, lastProduct.transform.position);
+		width += _gridScale * productWidth;
+
+		boxCollider.center = firstProduct.transform.InverseTransformPoint(midPoint);
+		boxCollider.size = new Vector3(width, _triggerHeight, _triggerDepth);
+		boxCollider.size /= _productScale;
+		boxCollider.isTrigger = true;
 	}
 
 	private bool GetTypeDefinition(ProductTypes type, out DataTableRow_ProductTypeTable typeDefinition)
