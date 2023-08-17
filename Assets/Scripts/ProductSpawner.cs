@@ -11,13 +11,12 @@ public class ProductGrabTrigger : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		var speed = 1;
-		speed++;
+		var cartInventory = other.GetComponent<CartInventory>();
+		var productData = GetComponent<ProductData>();
+		cartInventory.AddProduct(productData.Key, productData.Amount);
 	}
 	private void OnTriggerExit(Collider other)
 	{
-		var speed = 1;
-		speed++;
 	}
 }
 
@@ -149,6 +148,9 @@ public class ProductSpawner : MonoBehaviour
 						}
 						*/
 						//string result = productRenderer.materials[1].GetTag("label", true, "Nothing");
+
+						ProductData productData = newProduct.AddComponent(typeof(ProductData)) as ProductData;
+						productData.SetData(row.Key);
 
 						if (j == 0)
 						{
