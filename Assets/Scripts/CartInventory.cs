@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ProductData : MonoBehaviour
 {
@@ -27,7 +28,9 @@ public class ProductData : MonoBehaviour
 
 public class CartInventory : MonoBehaviour
 {
-    private IDictionary<string, int> _inventory;
+    public static UnityEvent<Dictionary<string, int>> OnInventoryChange = new UnityEvent<Dictionary<string, int>>();
+
+    private Dictionary<string, int> _inventory = new Dictionary<string, int>();
 
     public Vector3 _lookShelfPoint = new Vector3(0.0f, 0.5f, 0.0f);
     public Vector3 GetCartShelfPoint()
@@ -44,7 +47,7 @@ public class CartInventory : MonoBehaviour
 
         return -1;
     }
-    public IDictionary<string, int> GetInventory()
+    public Dictionary<string, int> GetInventory()
     {
         return _inventory;
     }
@@ -56,7 +59,9 @@ public class CartInventory : MonoBehaviour
 
     public void AddProduct(string key, int amount)
     {
-        if (_inventory.ContainsKey(key))
+        bool productInInventory = _inventory.ContainsKey(key);
+
+        if (productInInventory)
         {
             _inventory[key] += amount;
         }
@@ -64,6 +69,8 @@ public class CartInventory : MonoBehaviour
         {
             _inventory.Add(key, amount);
         }
+
+        OnInventoryChange.Invoke(_inventory);
     }
 
     public void RemoveProduct(string key, int amount)
@@ -72,11 +79,16 @@ public class CartInventory : MonoBehaviour
         {
             _inventory[key] -= amount;
         }
+
+
+        OnInventoryChange.Invoke(_inventory);
     }
 
     public void ClearInventory()
 	{
         _inventory.Clear();
+
+        OnInventoryChange.Invoke(_inventory);
     }
 
     // Start is called before the first frame update
@@ -91,9 +103,9 @@ public class CartInventory : MonoBehaviour
         
     }
 
-	private void OnDrawGizmos()
+	private void OnDrawGizmosSelected()
 	{
         Gizmos.color = Color.green;
-        Gizmos.DrawSphere(GetCartShelfPoint(), 0.1f);
+        Gizmos.DrawSphere(GetCartShelfPoint(), 0.05f);
     }
 }
