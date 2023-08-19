@@ -84,12 +84,16 @@ public class ProductGrabTrigger : MonoBehaviour
 
 			Vector3 gridPos = _closestProduct.transform.position;
 			gridPos.y += ProductSpawner._gridScale * 0.5f;
-			Gizmos.DrawWireCube(gridPos, new Vector3(ProductSpawner._gridScale, ProductSpawner._gridScale, ProductSpawner._gridScale));
+			gridPos.z += ProductSpawner._gridScale * 0.5f;
+			Gizmos.DrawWireCube(gridPos, new Vector3(ProductSpawner._gridScale, ProductSpawner._gridScale, 0.01f));
 
-			Gizmos.color = Color.green;
-			Gizmos.DrawSphere(_projectedCartPosition, 0.1f);
+			Gizmos.color = new Color(0.9f, 0.0f, 0.25f, 0.2f);
+			Gizmos.DrawCube(gridPos, new Vector3(ProductSpawner._gridScale, ProductSpawner._gridScale, 0.01f));
 
-			Gizmos.DrawLine(_products[_products.Count - 1].transform.position, _products[0].transform.position);
+			//Gizmos.color = Color.green;
+			//Gizmos.DrawSphere(_projectedCartPosition, 0.1f);
+
+			//Gizmos.DrawLine(_products[_products.Count - 1].transform.position, _products[0].transform.position);
 		}
 	}
 
@@ -238,6 +242,8 @@ public class ProductSpawner : MonoBehaviour
 						}
 						*/
 						//string result = productRenderer.materials[1].GetTag("label", true, "Nothing");
+
+						productRenderer.enabled = j > 0 || UnityEngine.Random.Range(0.0f, 1.0f) > 0.03f;
 
 						ProductData productData = newProduct.AddComponent(typeof(ProductData)) as ProductData;
 						productData.SetData(row.Key);
