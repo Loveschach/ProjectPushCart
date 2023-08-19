@@ -22,7 +22,16 @@ public class TriggerUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if( ( GAME_LENGTH - ( Time.time - startTime ) ) <= 0 ) {
+            ResetScore();
+            startTime = Time.time;
+        }
         time.text = "Time: " + Mathf.Round( ( GAME_LENGTH - ( Time.time - startTime ) ) );
+    }
+
+    void ResetScore() {
+        currentScore = 0;
+        score.text = "Score: " + currentScore;
     }
 
     void UpdateScore() {
