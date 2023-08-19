@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProductData : MonoBehaviour
 {
-    private string _key;
+    private string _key { get; set; }
     private int _amount = 0;
 
     public string Key   // property
@@ -28,6 +28,12 @@ public class ProductData : MonoBehaviour
 public class CartInventory : MonoBehaviour
 {
     private IDictionary<string, int> _inventory;
+
+    public Vector3 _lookShelfPoint = new Vector3(0.0f, 0.5f, 0.0f);
+    public Vector3 GetCartShelfPoint()
+    {
+        return transform.TransformPoint(_lookShelfPoint);
+    }
 
     public int GetProductAmount(string key)
     {
@@ -83,5 +89,11 @@ public class CartInventory : MonoBehaviour
     void Update()
     {
         
+    }
+
+	private void OnDrawGizmos()
+	{
+        Gizmos.color = Color.green;
+        Gizmos.DrawSphere(GetCartShelfPoint(), 0.1f);
     }
 }

@@ -19,7 +19,6 @@ public enum WheelPosition
     RearRight
 }
 
-
 public class CartController : MonoBehaviour
 {
     // Cart constants
@@ -46,9 +45,19 @@ public class CartController : MonoBehaviour
     public InputAction stepAction;
     public InputAction turnAction;
     public InputAction brakeAction;
+    public InputAction grabAction; // Need left and right grab
 
     StepSide currentSide = StepSide.Left;
     float stepTimer = 0;
+
+    // TODO: Make this a left/right arm kind of thing
+    bool _grabbing = false;
+    public bool Grabbing   // property
+    {
+        get { return _grabbing; }   // get method
+        set { _grabbing = value; }  // set method
+    }
+
 
     private void Start()
     {
@@ -57,6 +66,7 @@ public class CartController : MonoBehaviour
         stepAction.Enable();
         turnAction.Enable();
         brakeAction.Enable();
+        grabAction.Enable();
     }
 
     float GetWeightOnWheel(WheelPosition wheel)
@@ -224,5 +234,7 @@ public class CartController : MonoBehaviour
 
             }
         }
+
+        _grabbing = grabAction.ReadValue<float>() > 0;
     }
 }

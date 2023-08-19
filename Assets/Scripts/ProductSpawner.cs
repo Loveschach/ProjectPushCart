@@ -8,20 +8,113 @@ using UnityEngine.Splines;
 // This is a simple 
 public class ProductGrabTrigger : MonoBehaviour
 {
+	private GameObject _closestProduct = null;
+	private Vector3 _projectedCartPosition = Vector3.zero;
+
+	private List<GameObject> _products;
+	private DataTableRow_StoreInventory _productData;
+	private DataTableRow_ProductTypeTable _typeDefinition;
+	private bool _middleShelf = true;
+
+	public void InitTriggerData(List<GameObject> products, DataTableRow_StoreInventory productData, DataTableRow_ProductTypeTable typeDefinition, bool middleShelf = true)
+	{
+		_products = products;
+		_productData = productData;
+		_typeDefinition = typeDefinition;
+		_middleShelf = middleShelf;
+	}
+
+	public Vector3 GetShelfLine()
+	{
+		return _products[_products.Count - 1].transform.position - _products[0].transform.position;
+	}
+
+	public void UpdatePlayerInTrigger(Collider other)
+	{
+		var cartInventory = other.GetComponent<CartInventory>();
+		var cartController = other.GetComponent<CartController>();
+		var productData = GetComponent<ProductData>();
+		float productWidth = _typeDefinition.WidthUnits * ProductSpawner._gridScale;
+
+		// Get the cart point from the player cart
+		Vector3 cartPoint = cartInventory.GetCartShelfPoint();
+
+		// Project the cart point for inventory onto the shelf line
+		Vector3 A = _products[0].transform.position;
+		Vector3 AP = cartPoint - A;
+		Vector3 AB = GetShelfLine();
+		_projectedCartPosition = A + Vector3.Dot(AP, AB) / Vector3.Dot(AB, AB) * AB;
+
+		// Vector to projected point along the shelf line
+		Vector3 toProjectedPort = _projectedCartPosition - A;
+
+		// Make sure the projected point is actually within the line
+		float checkBehind = Vector3.Dot(toProjectedPort, -transform.right);
+		if (checkBehind > 0.0f && (toProjectedPort.magnitude < (GetShelfLine().magnitude + productWidth)))
+		{
+			// Use the "size" of this product (width * scale + gap) to know which product is closest by using the magnitude!
+			int closestProductIndex = (int)MathF.Floor(toProjectedPort.magnitude / (productWidth + ProductSpawner._gridGap));
+			closestProductIndex = Math.Min(closestProductIndex, _products.Count - 1);
+
+			_closestProduct = _products[closestProductIndex];
+
+			var productRenderer = _closestProduct.GetComponent<Renderer>();
+			if (productRenderer.enabled && cartController.Grabbing)
+			{
+				productRenderer.enabled = false;
+				cartInventory.AddProduct(productData.Key, productData.Amount);
+			}
+		}
+		else
+		{
+			_closestProduct = null;
+		}
+	}
+
+	// Update is called once per frame
+	void Update()
+	{
+	}
+
+	private void OnDrawGizmos()
+	{
+		if (_closestProduct)
+		{
+			Gizmos.color = new Color(0.9f, 0.0f, 0.25f, 1.0f);
+
+			Vector3 gridPos = _closestProduct.transform.position;
+			gridPos.y += ProductSpawner._gridScale * 0.5f;
+			Gizmos.DrawWireCube(gridPos, new Vector3(ProductSpawner._gridScale, ProductSpawner._gridScale, ProductSpawner._gridScale));
+
+			Gizmos.color = Color.green;
+			Gizmos.DrawSphere(_projectedCartPosition, 0.1f);
+
+			Gizmos.DrawLine(_products[_products.Count - 1].transform.position, _products[0].transform.position);
+		}
+	}
+
+	private void OnTriggerStay(Collider other)
+	{
+		UpdatePlayerInTrigger(other);
+	}
 
 	private void OnTriggerEnter(Collider other)
 	{
-		var cartInventory = other.GetComponent<CartInventory>();
-		var productData = GetComponent<ProductData>();
-		cartInventory.AddProduct(productData.Key, productData.Amount);
 	}
+
 	private void OnTriggerExit(Collider other)
 	{
+		_closestProduct = null;
 	}
 }
 
 public class ProductSpawner : MonoBehaviour
 {
+	static public float _gridScale = 0.1f;
+	static public float _gridGap = 0.01f;
+	static public float _productScale = 0.1f;
+
+
 	public Transform _endPos;
 	//public GameObject _spline;
 	//public SplineInstantiate _splineInstantiate;
@@ -29,9 +122,6 @@ public class ProductSpawner : MonoBehaviour
 	// TODO: Move this to a "store" object
 	public DataTable_StoreInventory _inventory;
 	public DataTable_ProductTypeTable _typeDefinitions;
-	public float _gridScale = 0.02f;
-	public float _gridGap = 0.0f;
-	public float _productScale = 0.2f;
 
 	public ProductTypes[] _types;
 
@@ -166,6 +256,7 @@ public class ProductSpawner : MonoBehaviour
 				AddProductTrigger(productsOfType[0], productsOfType[productsOfType.Count - 1], productWidth);
 
 				ProductGrabTrigger productGrabTrigger = productsOfType[0].AddComponent(typeof(ProductGrabTrigger)) as ProductGrabTrigger;
+				productGrabTrigger.InitTriggerData(productsOfType, row, typeDefinition);
 
 			}
 		}
@@ -180,11 +271,11 @@ public class ProductSpawner : MonoBehaviour
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = new Color(0.8f, 0.4f, 0.2f, 1.0f);
-		Gizmos.DrawCube(transform.position, new Vector3(0.1f, 0.1f, 0.1f));
+		Gizmos.DrawCube(transform.position, new Vector3(0.01f, 0.01f, 0.01f));
 
 		// Can we make this visable ONLY when the object is selected AND not have it hidden as you move it around (since then it's not selected)
 		Gizmos.color = new Color(0.2f, 0.4f, 0.8f, 1.0f);
-		Gizmos.DrawSphere(_endPos.position, 0.1f);
+		Gizmos.DrawSphere(_endPos.position, 0.01f);
 	}
 
 	private void OnDrawGizmosSelected()
