@@ -86,7 +86,7 @@ MonoBehaviour:
         Type: 8
         GameObject: {fileID: 919132149155446097, guid: 7b6424e2c368cb7419acc7773dcce000, type: 3}
         WidthUnits: 3
-        HeightUnits: 1
+        HeightUnits: 2
         DepthUnits: 2
     - rid: 3803732344663965700
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
