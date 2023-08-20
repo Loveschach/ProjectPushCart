@@ -16,41 +16,59 @@ public class TriggerUI : MonoBehaviour
     void Start()
     {
         startTime = Time.time;
-        score.text = "Score: 0";
-        TriggerManager.hitFoodTrigger.AddListener( UpdateScore );
+        TriggerManager.hitFoodTrigger.AddListener(UpdateScore);
+        CartInventory.OnInventoryChange.AddListener(UpdateInventory);
 
-        CartInventory.OnInventoryChange.AddListener( UpdateInventory );
+        if (score != null)
+        {
+            score.text = "Score: 0";
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if( ( GAME_LENGTH - ( Time.time - startTime ) ) <= 0 ) {
-            ResetScore();
-            startTime = Time.time;
+        if (time != null)
+        {
+            if ((GAME_LENGTH - (Time.time - startTime)) <= 0)
+            {
+                ResetScore();
+                startTime = Time.time;
+            }
+            time.text = "Time: " + Mathf.Round((GAME_LENGTH - (Time.time - startTime)));
         }
-        time.text = "Time: " + Mathf.Round( ( GAME_LENGTH - ( Time.time - startTime ) ) );
     }
 
-    void ResetScore() {
-        currentScore = 0;
-        score.text = "Score: " + currentScore;
+    void ResetScore() 
+    {
+        if (score != null)
+        {
+            currentScore = 0;
+            score.text = "Score: " + currentScore;
+        }
     }
 
-    void UpdateScore() {
-        currentScore++;
-        score.text = "Score: " + currentScore;
+    void UpdateScore()
+    {
+        if (score != null)
+        {
+            currentScore++;
+            score.text = "Score: " + currentScore;
+        }
 	}
     void UpdateInventory(Dictionary<string, int> cartInventory)
     {
-        inventory.text = "Inventory\n---------\n";
-
-        DataTable_StoreInventory storeInventory = StoreCreator.GetStoreInventory();
-
-        foreach (var productData in cartInventory)
+        if (inventory != null)
         {
-            var product = storeInventory.GetRow<DataTableRow_StoreInventory>(productData.Key);
-            inventory.text += product.Name + ": " + productData.Value + "\n";
+            inventory.text = "Inventory\n---------\n";
+
+            DataTable_StoreInventory storeInventory = StoreCreator.GetStoreInventory();
+
+            foreach (var productData in cartInventory)
+            {
+                var product = storeInventory.GetRow<DataTableRow_StoreInventory>(productData.Key);
+                inventory.text += product.Name + ": " + productData.Value + "\n";
+            }
         }
     }
 }
