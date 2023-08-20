@@ -64,10 +64,12 @@ public class StoreAisle : MonoBehaviour
             if(i == 0 || i == (shelfCount - 1))
             {
                 Vector3 signPos = pos + ((rightSidePos - pos) * 0.5f);
-                signPos += Vector3.up * 2;
+                signPos += Vector3.up * 2.3f;
+                float frontOfAisleDirection = i == 0 ? 1 : -1;
+                signPos += transform.right * 0.5f * frontOfAisleDirection;
                 GameObject aisleSign1 = Instantiate(_aisleSignPrefab, signPos, transform.rotation);
                 var aisleSignComponent = aisleSign1.GetComponent<AisleSign>();
-                aisleSignComponent.SetText(_aisleType.ToString());
+                aisleSignComponent.SetText(_aisleType);
             }
 
             pos += transform.right * -storeShelfConfig._unitTotalLength * StoreCreator.GridScale;

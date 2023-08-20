@@ -9,9 +9,9 @@ public class AisleSign : MonoBehaviour
     public TMP_Text _frontText;
     public TMP_Text _backText;
 
-    public void SetText(string aisleName)
+    public void SetText(AisleType _aisleType)
 	{
-        _frontText.text = _backText.text = aisleName;
+        _frontText.text = _backText.text = _aisleType.ToString();
     }
 
     // Start is called before the first frame update
