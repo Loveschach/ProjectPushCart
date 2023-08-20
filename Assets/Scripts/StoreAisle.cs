@@ -24,6 +24,8 @@ public class StoreAisle : MonoBehaviour
     public int _width = 1;
     public AisleType _aisleType = AisleType.Invalid;
 
+    public GameObject _aisleSignPrefab;
+
     public GameObject _shelfPrefab;
 
     List<GameObject> _leftShelves = new List<GameObject>();
@@ -58,6 +60,15 @@ public class StoreAisle : MonoBehaviour
             GameObject RightShelf = Instantiate(_shelfPrefab, rightSidePos, transform.rotation);
             RightShelf.transform.localScale = new Vector3(RightShelf.transform.localScale.x, RightShelf.transform.localScale.y, -RightShelf.transform.localScale.z);
             _rightShelves.Add(RightShelf);
+
+            if(i == 0 || i == (shelfCount - 1))
+            {
+                Vector3 signPos = pos + ((rightSidePos - pos) * 0.5f);
+                signPos += Vector3.up * 2;
+                GameObject aisleSign1 = Instantiate(_aisleSignPrefab, signPos, transform.rotation);
+                var aisleSignComponent = aisleSign1.GetComponent<AisleSign>();
+                aisleSignComponent.SetText(_aisleType.ToString());
+            }
 
             pos += transform.right * -storeShelfConfig._unitTotalLength * StoreCreator.GridScale;
         }

@@ -26,9 +26,9 @@ public class StoreCreator : MonoBehaviour
     static public float ProductScale = 0.9f;
     
     public DataTable_StoreInventory Inventory;
-    public DataTable_ProductTypeTable TypeDefinitions;
+	public DataTable_ProductTypeTable TypeDefinitions;
 
-    public static DataTable_StoreInventory GetStoreInventory()
+	public static DataTable_StoreInventory GetStoreInventory()
 	{
         var storeCreatorObject = FindFirstObjectByType<StoreCreator>();
         return storeCreatorObject.Inventory;
