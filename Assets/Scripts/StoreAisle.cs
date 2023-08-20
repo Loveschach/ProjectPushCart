@@ -55,7 +55,8 @@ public class StoreAisle : MonoBehaviour
 
             var rightSidePos = pos + (transform.forward * _width * StoreCreator.GridScale);
             var rightSideRotation = transform.rotation * Quaternion.AngleAxis(180, transform.up);
-            GameObject RightShelf = Instantiate(_shelfPrefab, rightSidePos, rightSideRotation);
+            GameObject RightShelf = Instantiate(_shelfPrefab, rightSidePos, transform.rotation);
+            RightShelf.transform.localScale = new Vector3(RightShelf.transform.localScale.x, RightShelf.transform.localScale.y, -RightShelf.transform.localScale.z);
             _rightShelves.Add(RightShelf);
 
             pos += transform.right * -storeShelfConfig._unitTotalLength * StoreCreator.GridScale;
@@ -81,7 +82,7 @@ public class StoreAisle : MonoBehaviour
             var newComponent = gameObject.AddComponent<ProductSpawner>();
             newComponent.transform.position = Shelf.transform.TransformPoint(shelfData.Position);
             newComponent.transform.rotation = Shelf.transform.rotation;
-            newComponent.Contruct(_aisleType, shelfData.Enum, _length);
+            newComponent.Contruct(Shelf, _aisleType, shelfData.Enum, _length, shelfData.UnitDepth, shelfData.UnitHeight);
 
             //_productRows[0].Add(gameObject);
         }

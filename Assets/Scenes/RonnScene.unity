@@ -8907,7 +8907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _length: 100
   _width: 35
-  _aisleType: 7
+  _aisleType: 6
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &2095331476
 Transform:

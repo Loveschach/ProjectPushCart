@@ -43,4 +43,10 @@ MonoBehaviour:
     ColumnColor: {r: 0.3773585, g: 0, b: 0.36437395, a: 1}
     ColumnWidth: 60
     selected: 0
+  - DataType: int
+    CustomDataType: 
+    Name: DepthUnits
+    ColumnColor: {r: 0.19469574, g: 0, b: 0.6039216, a: 1}
+    ColumnWidth: 60
+    selected: 0
   columnsSetName: ProductTypeTable

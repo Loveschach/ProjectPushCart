@@ -14,14 +14,14 @@ public class ProductGrabTrigger : MonoBehaviour
 	private List<GameObject> _products;
 	private DataTableRow_StoreInventory _productData;
 	private DataTableRow_ProductTypeTable _typeDefinition;
-	private bool _middleShelf = true;
+	private ShelfType _shelfType = ShelfType.Middle;
 
-	public void InitTriggerData(List<GameObject> products, DataTableRow_StoreInventory productData, DataTableRow_ProductTypeTable typeDefinition, bool middleShelf = true)
+	public void InitTriggerData(List<GameObject> products, DataTableRow_StoreInventory productData, DataTableRow_ProductTypeTable typeDefinition, ShelfType shelfType)
 	{
 		_products = products;
 		_productData = productData;
 		_typeDefinition = typeDefinition;
-		_middleShelf = middleShelf;
+		_shelfType = shelfType;
 	}
 
 	public Vector3 GetShelfLine()
@@ -31,6 +31,10 @@ public class ProductGrabTrigger : MonoBehaviour
 
 	public void UpdatePlayerInTrigger(Collider other)
 	{
+		// HACK FOR NOW
+		if (_shelfType != ShelfType.Middle)
+			return;
+
 		var cartInventory = other.GetComponent<CartInventory>();
 		var cartController = other.GetComponent<CartController>();
 		var productData = GetComponent<ProductData>();
@@ -116,6 +120,7 @@ public class ProductGrabTrigger : MonoBehaviour
 public class ProductSpawner : MonoBehaviour
 {
 	public Transform _endPos;
+	public GameObject _shelf;
 	//public GameObject _spline;
 	//public SplineInstantiate _splineInstantiate;
 
@@ -135,14 +140,21 @@ public class ProductSpawner : MonoBehaviour
 	private Vector3 _spawnDirection = Vector3.right;
 	private float _spawnDistance = 0.0f;
 	private int _shelfSpots = 0;
+	private int _maxDepth = 2;
+	private int _maxHeight = 3;
 
 	public List<List<GameObject>> _productsSpawned = new List<List<GameObject>>();
 
-	public void Contruct(AisleType aisleType, ShelfType shelfType, int length)
+	public void Contruct(GameObject shelf, AisleType aisleType, ShelfType shelfType, int length, int maxDepth, int maxHeight)
 	{
+		_shelf = shelf;
+
 		HackSetupAisle(aisleType);
+
 		_shelfType = shelfType;
 		_shelfSpots = length;
+		_maxDepth = maxDepth;
+		_maxHeight = maxHeight;
 	}
 
 	public bool HackSetupAisle(AisleType aisleType)
@@ -232,15 +244,24 @@ public class ProductSpawner : MonoBehaviour
 			var shelfHasProductType = _types.Find(element => element == row.Type);
 			if (shelfHasProductType > 0)
 			{
-				rows.Add(row);
-				totalWeight += row.Odds;
+				// TODO: Cashe this because we do it again.
+				DataTableRow_ProductTypeTable typeDefinition;
+				if (GetTypeDefinition(row.Type, out typeDefinition))
+				{
+					if(typeDefinition.HeightUnits <= _maxHeight)
+					{
+						rows.Add(row);
+						totalWeight += row.Odds;
+					}
+				}
+
 			}
 		}
 
 		Vector3 productPos = transform.position;
 		
 		// Line it up with the front of the shelf
-		productPos -= transform.forward * (StoreCreator.GridScale * 0.5f);
+		productPos -= _shelf.transform.forward * (StoreCreator.GridScale * 0.5f);
 
 		int productWidth = -1;
 		int lastProductWidth = -1;
@@ -271,15 +292,18 @@ public class ProductSpawner : MonoBehaviour
 
 					productPos += transform.right * -nextSpotDist;
 
-					Quaternion productQuat = new Quaternion(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z, 1.0f);
-
-					for (int j = 0; j < _amountOfRows; j++)
+					for (int j = 0, loopCount = 0; j < _maxDepth && loopCount < 2; j += typeDefinition.DepthUnits, ++loopCount)
 					{
 						Vector3 thisProductPos = productPos;
-						thisProductPos += transform.forward * typeDefinition.WidthUnits * -(StoreCreator.GridScale + StoreCreator.GridGap) * j;
+						thisProductPos += _shelf.transform.forward * -(StoreCreator.GridScale + StoreCreator.GridGap) * j;
 
 						float amountRotation = UnityEngine.Random.Range(_rotationOffsetMin, _rotationOffsetMax);
-						var productRotation = transform.rotation * Quaternion.AngleAxis(amountRotation, transform.up);
+
+						// If the shelf is inverted in the Z we want to rotate to match the front of the shelf
+						if (_shelf.transform.localScale.z < 0)
+							amountRotation += 180;
+
+							var productRotation = _shelf.transform.rotation * Quaternion.AngleAxis(amountRotation, transform.up);
 						GameObject newProduct = Instantiate(typeDefinition.GameObject, thisProductPos, productRotation);
 						newProduct.transform.localScale = new Vector3(StoreCreator.ProductScale, StoreCreator.ProductScale, StoreCreator.ProductScale);
 
@@ -287,7 +311,7 @@ public class ProductSpawner : MonoBehaviour
 						// TEMP:
 						productRenderer.materials[0].SetColor("_Color", row.ProductColor);
 
-						productRenderer.enabled = j > 0 || UnityEngine.Random.Range(0.0f, 1.0f) > 0.07f;
+						productRenderer.enabled = j > 0 || UnityEngine.Random.Range(0.0f, 1.0f) > 0.17f;
 
 						ProductData productData = newProduct.AddComponent(typeof(ProductData)) as ProductData;
 						productData.SetData(row.Key);
@@ -306,7 +330,7 @@ public class ProductSpawner : MonoBehaviour
 				AddProductTrigger(productsOfType[0], productsOfType[productsOfType.Count - 1], productWidth);
 
 				ProductGrabTrigger productGrabTrigger = productsOfType[0].AddComponent(typeof(ProductGrabTrigger)) as ProductGrabTrigger;
-				productGrabTrigger.InitTriggerData(productsOfType, row, typeDefinition);
+				productGrabTrigger.InitTriggerData(productsOfType, row, typeDefinition, _shelfType);
 
 			}
 		}

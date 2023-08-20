@@ -33,6 +33,7 @@ MonoBehaviour:
         GameObject: {fileID: 919132149155446097, guid: a5804c7a0c5aea54d9456becd5085d94, type: 3}
         WidthUnits: 1
         HeightUnits: 1
+        DepthUnits: 1
     - rid: 3803732189435396097
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -41,6 +42,7 @@ MonoBehaviour:
         GameObject: {fileID: 919132149155446097, guid: c9adfa9c0d8a8c2458f212ec28a30d62, type: 3}
         WidthUnits: 1
         HeightUnits: 2
+        DepthUnits: 1
     - rid: 3803732189435396098
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -49,6 +51,7 @@ MonoBehaviour:
         GameObject: {fileID: 919132149155446097, guid: 456419fc0b635e94e8f6e6872f9c59be, type: 3}
         WidthUnits: 2
         HeightUnits: 3
+        DepthUnits: 2
     - rid: 3803732344663965696
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -57,6 +60,7 @@ MonoBehaviour:
         GameObject: {fileID: 919132149155446097, guid: 08fb11094f108ff4fb5637a5b470fbf2, type: 3}
         WidthUnits: 2
         HeightUnits: 2
+        DepthUnits: 3
     - rid: 3803732344663965697
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -64,7 +68,8 @@ MonoBehaviour:
         Type: 5
         GameObject: {fileID: 919132149155446097, guid: d47da7fcf5282dd46814741cf78ab981, type: 3}
         WidthUnits: 2
-        HeightUnits: 3
+        HeightUnits: 4
+        DepthUnits: 2
     - rid: 3803732344663965698
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -73,6 +78,7 @@ MonoBehaviour:
         GameObject: {fileID: 919132149155446097, guid: 9d26f55c6329bd94ea8e84b8741a7e00, type: 3}
         WidthUnits: 4
         HeightUnits: 3
+        DepthUnits: 3
     - rid: 3803732344663965699
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -81,6 +87,7 @@ MonoBehaviour:
         GameObject: {fileID: 919132149155446097, guid: 7b6424e2c368cb7419acc7773dcce000, type: 3}
         WidthUnits: 3
         HeightUnits: 1
+        DepthUnits: 2
     - rid: 3803732344663965700
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -89,6 +96,7 @@ MonoBehaviour:
         GameObject: {fileID: 919132149155446097, guid: ed73ceb759e6d6948b3f098e1902be84, type: 3}
         WidthUnits: 1
         HeightUnits: 1
+        DepthUnits: 1
     - rid: 3803732344663965701
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -97,3 +105,4 @@ MonoBehaviour:
         GameObject: {fileID: 919132149155446097, guid: 766c2f953b6bb134591c63a820eda1e2, type: 3}
         WidthUnits: 2
         HeightUnits: 3
+        DepthUnits: 1
