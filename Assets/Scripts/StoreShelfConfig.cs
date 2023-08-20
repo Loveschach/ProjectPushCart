@@ -2,19 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ProductTypes
+public class StoreShelfConfig : MonoBehaviour
 {
-    Invalid,
-    MilkPint,
-    MilkQuart,
-    MilkGallon,
-    Cereal,
-    CannedGood,
-}
-
-
-public class Shelf : MonoBehaviour
-{
+    public int _unitTotalLength = 1;
 
     // Start is called before the first frame update
     void Start()

@@ -34,7 +34,7 @@ public class ProductGrabTrigger : MonoBehaviour
 		var cartInventory = other.GetComponent<CartInventory>();
 		var cartController = other.GetComponent<CartController>();
 		var productData = GetComponent<ProductData>();
-		float productWidth = _typeDefinition.WidthUnits * ProductSpawner._gridScale;
+		float productWidth = _typeDefinition.WidthUnits * StoreCreator.GridScale;
 
 		// Get the cart point from the player cart
 		Vector3 cartPoint = cartInventory.GetCartShelfPoint();
@@ -53,7 +53,7 @@ public class ProductGrabTrigger : MonoBehaviour
 		if (checkBehind > 0.0f && (toProjectedPort.magnitude < (GetShelfLine().magnitude + productWidth)))
 		{
 			// Use the "size" of this product (width * scale + gap) to know which product is closest by using the magnitude!
-			int closestProductIndex = (int)MathF.Floor(toProjectedPort.magnitude / (productWidth + ProductSpawner._gridGap));
+			int closestProductIndex = (int)MathF.Floor(toProjectedPort.magnitude / (productWidth + StoreCreator.GridGap));
 			closestProductIndex = Math.Min(closestProductIndex, _products.Count - 1);
 
 			_closestProduct = _products[closestProductIndex];
@@ -80,15 +80,16 @@ public class ProductGrabTrigger : MonoBehaviour
 	{
 		if (_closestProduct)
 		{
+			Gizmos.matrix = _closestProduct.transform.localToWorldMatrix;
 			Gizmos.color = new Color(0.9f, 0.0f, 0.25f, 1.0f);
 
-			Vector3 gridPos = _closestProduct.transform.position;
-			gridPos.y += ProductSpawner._gridScale * 0.5f;
-			gridPos.z += ProductSpawner._gridScale * 0.5f;
-			Gizmos.DrawWireCube(gridPos, new Vector3(ProductSpawner._gridScale, ProductSpawner._gridScale, 0.01f));
+			Vector3 gridPos = Vector3.zero;
+			gridPos.y += StoreCreator.GridScale * 0.5f;
+			gridPos.z += StoreCreator.GridScale * 0.5f;
+			Gizmos.DrawWireCube(gridPos, new Vector3(StoreCreator.GridScale, StoreCreator.GridScale, 0.001f));
 
 			Gizmos.color = new Color(0.9f, 0.0f, 0.25f, 0.2f);
-			Gizmos.DrawCube(gridPos, new Vector3(ProductSpawner._gridScale, ProductSpawner._gridScale, 0.01f));
+			Gizmos.DrawCube(gridPos, new Vector3(StoreCreator.GridScale, StoreCreator.GridScale, 0.001f));
 
 			//Gizmos.color = Color.green;
 			//Gizmos.DrawSphere(_projectedCartPosition, 0.1f);
@@ -114,24 +115,19 @@ public class ProductGrabTrigger : MonoBehaviour
 
 public class ProductSpawner : MonoBehaviour
 {
-	static public float _gridScale = 0.1f;
-	static public float _gridGap = 0.01f;
-	static public float _productScale = 0.1f;
-
-
 	public Transform _endPos;
 	//public GameObject _spline;
 	//public SplineInstantiate _splineInstantiate;
 
-	// TODO: Move this to a "store" object
-	public DataTable_StoreInventory _inventory;
-	public DataTable_ProductTypeTable _typeDefinitions;
+	public AisleType _aisleType;
+	public ShelfType _shelfType;
 
-	public ProductTypes[] _types;
+	//public ProductTypes[] _types;
+	public List<ProductTypes> _types = new List<ProductTypes>();
 
-	public int _amountOfRows = 1;
-	public float _rotationOffsetMin = 0.0f;
-	public float _rotationOffsetMax = 0.0f;
+	public int _amountOfRows = 2;
+	public float _rotationOffsetMin = -5.0f;
+	public float _rotationOffsetMax = 5.0f;
 
 	public float _triggerDepth = 2.0f;
 	public float _triggerHeight = 4.0f;
@@ -142,10 +138,59 @@ public class ProductSpawner : MonoBehaviour
 
 	public List<List<GameObject>> _productsSpawned = new List<List<GameObject>>();
 
-	private void OnValidate()
+	public void Contruct(AisleType aisleType, ShelfType shelfType, int length)
 	{
-		_gridScale = MathF.Max(_gridScale, 0.1f);
-		_productScale = MathF.Max(_productScale, 0.01f);
+		HackSetupAisle(aisleType);
+		_shelfType = shelfType;
+		_shelfSpots = length;
+	}
+
+	public bool HackSetupAisle(AisleType aisleType)
+	{
+		_aisleType = aisleType;
+
+		switch (_aisleType)
+		{
+			case AisleType.Baking:
+				break;
+
+			case AisleType.Beverages:
+				_types.Add(ProductTypes.SodaSixPack);
+				break;
+
+			case AisleType.BoxedDinners:
+				break;
+
+			case AisleType.Bread:
+				_types.Add(ProductTypes.BreadLoaf);
+				break;
+
+			case AisleType.CannedGoods:
+				break;
+
+			case AisleType.Cereal:
+				break;
+
+			case AisleType.Cleaning:
+				_types.Add(ProductTypes.SprayBottle);
+				_types.Add(ProductTypes.PaperTowelSingle);
+				_types.Add(ProductTypes.ToiletPaperPack);
+				break;
+
+			case AisleType.Milk:
+				_types.Add(ProductTypes.MilkPint);
+				_types.Add(ProductTypes.MilkQuart);
+				_types.Add(ProductTypes.MilkGallon);
+				break;
+
+			case AisleType.Produce:
+				break;
+
+			case AisleType.Snacks:
+				break;
+		}
+
+		return false;
 	}
 
 	// Start is called before the first frame update
@@ -157,10 +202,13 @@ public class ProductSpawner : MonoBehaviour
 
 	void InitSpawnVars()
 	{
-		_spawnDirection = _endPos.position - transform.position;
-		_spawnDistance = _spawnDirection.magnitude;
-		_spawnDirection.Normalize();
-		_shelfSpots = (int)MathF.Round(_spawnDistance / (_gridScale + _gridGap));
+		if (_endPos)
+		{
+			_spawnDirection = _endPos.position - transform.position;
+			_spawnDistance = _spawnDirection.magnitude;
+			_spawnDirection.Normalize();
+			_shelfSpots = (int)MathF.Round(_spawnDistance / (StoreCreator.GridScale + StoreCreator.GridGap));
+		}
 
 		//var splineComponent = _spline.GetComponent<Spline>();
 		//splineComponent.Evaluate(0.5f, out position, out target, out up);
@@ -173,23 +221,26 @@ public class ProductSpawner : MonoBehaviour
 		List<DataTableRow_StoreInventory> rows = new List<DataTableRow_StoreInventory>();
 		var totalWeight = 0.0f;
 
-		string[] keys = _inventory.GetAllKeys();
+		var storeInventory = StoreCreator.GetStoreInventory();
+
+		string[] keys = storeInventory.GetAllKeys();
 		foreach (var key in keys)
 		{
-			var row = _inventory.GetRow<DataTableRow_StoreInventory>(key);
+			var row = storeInventory.GetRow<DataTableRow_StoreInventory>(key);
 
-			var shelfHasProductType = Array.Exists(_types, element => element == row.Type);
-			if (shelfHasProductType)
+			//var shelfHasProductType = Array.Exists(_types, element => element == row.Type);
+			var shelfHasProductType = _types.Find(element => element == row.Type);
+			if (shelfHasProductType > 0)
 			{
 				rows.Add(row);
 				totalWeight += row.Odds;
 			}
 		}
 
-		// TODO: Might want to shuffle the rows!
-
-
 		Vector3 productPos = transform.position;
+		
+		// Line it up with the front of the shelf
+		productPos -= transform.forward * (StoreCreator.GridScale * 0.5f);
 
 		int productWidth = -1;
 		int lastProductWidth = -1;
@@ -211,39 +262,32 @@ public class ProductSpawner : MonoBehaviour
 
 				for (int i = 0; i < amountToSpawn; i++)
 				{
-					float nextSpotDist = _gridGap;
-					nextSpotDist += _gridScale * (float)productWidth * 0.5f;
+					float nextSpotDist = StoreCreator.GridGap;
+					nextSpotDist += StoreCreator.GridScale * (float)productWidth * 0.5f;
 					if (lastProductWidth != -1)
 					{
-						nextSpotDist += _gridScale * (float)lastProductWidth * 0.5f;
+						nextSpotDist += StoreCreator.GridScale * (float)lastProductWidth * 0.5f;
 					}
 
-					productPos += _spawnDirection * nextSpotDist;
+					productPos += transform.right * -nextSpotDist;
 
 					Quaternion productQuat = new Quaternion(transform.eulerAngles.x, transform.eulerAngles.y, transform.eulerAngles.z, 1.0f);
 
 					for (int j = 0; j < _amountOfRows; j++)
 					{
 						Vector3 thisProductPos = productPos;
-						thisProductPos += transform.forward * typeDefinition.WidthUnits * -(_gridScale + _gridGap) * j;
+						thisProductPos += transform.forward * typeDefinition.WidthUnits * -(StoreCreator.GridScale + StoreCreator.GridGap) * j;
 
-						GameObject newProduct = Instantiate(typeDefinition.GameObject, thisProductPos, productQuat);
-						newProduct.transform.localScale = new Vector3(_productScale, _productScale, _productScale);
+						float amountRotation = UnityEngine.Random.Range(_rotationOffsetMin, _rotationOffsetMax);
+						var productRotation = transform.rotation * Quaternion.AngleAxis(amountRotation, transform.up);
+						GameObject newProduct = Instantiate(typeDefinition.GameObject, thisProductPos, productRotation);
+						newProduct.transform.localScale = new Vector3(StoreCreator.ProductScale, StoreCreator.ProductScale, StoreCreator.ProductScale);
 
 						var productRenderer = newProduct.GetComponent<Renderer>();
-						productRenderer.materials[1].SetColor("_Color", row.ProductColor);
-						/*
-						foreach (var mat in productRenderer.materials)
-						{
-							if(mat.name.Contains("Blue") || mat.name.Contains("White"))
-							{
-								mat.SetColor("_Color", row.ProductColor);
-							}
-						}
-						*/
-						//string result = productRenderer.materials[1].GetTag("label", true, "Nothing");
+						// TEMP:
+						productRenderer.materials[0].SetColor("_Color", row.ProductColor);
 
-						productRenderer.enabled = j > 0 || UnityEngine.Random.Range(0.0f, 1.0f) > 0.03f;
+						productRenderer.enabled = j > 0 || UnityEngine.Random.Range(0.0f, 1.0f) > 0.07f;
 
 						ProductData productData = newProduct.AddComponent(typeof(ProductData)) as ProductData;
 						productData.SetData(row.Key);
@@ -292,15 +336,15 @@ public class ProductSpawner : MonoBehaviour
 
 		Vector3 sd = transform.InverseTransformDirection(_spawnDirection);
 		Vector3 gridPos = Vector3.zero;
-		gridPos.y += _gridScale * 0.5f;
-		gridPos += sd * _gridScale * 0.5f;
+		gridPos.y += StoreCreator.GridScale * 0.5f;
+		gridPos += sd * StoreCreator.GridScale * 0.5f;
 
 		for (int i = 0; i < _shelfSpots; i++)
 		{
 			Gizmos.matrix = transform.localToWorldMatrix;
-			Gizmos.DrawWireCube(gridPos, new Vector3(_gridScale, _gridScale, _gridScale));
+			Gizmos.DrawWireCube(gridPos, new Vector3(StoreCreator.GridScale, StoreCreator.GridScale, StoreCreator.GridScale));
 
-			float nextSpotDist = _gridScale + _gridGap;
+			float nextSpotDist = StoreCreator.GridScale + StoreCreator.GridGap;
 			gridPos += sd * nextSpotDist;
 		}
 	}
@@ -314,22 +358,23 @@ public class ProductSpawner : MonoBehaviour
 		midPoint += firstProduct.transform.forward * 0.5f * _triggerDepth;
 
 		float width = Vector3.Distance(firstProduct.transform.position, lastProduct.transform.position);
-		width += _gridScale * productWidth;
+		width += StoreCreator.GridScale * productWidth;
 
 		boxCollider.center = firstProduct.transform.InverseTransformPoint(midPoint);
 		boxCollider.size = new Vector3(width, _triggerHeight, _triggerDepth);
-		boxCollider.size /= _productScale;
+		boxCollider.size /= StoreCreator.ProductScale;
 		boxCollider.isTrigger = true;
 	}
 
 	private bool GetTypeDefinition(ProductTypes type, out DataTableRow_ProductTypeTable typeDefinition)
 	{
 		// TODO: Can turn the table rows into a map for speed up!
-		
-		string[] keys = _typeDefinitions.GetAllKeys();
+
+		DataTable_ProductTypeTable typeDefinitions = StoreCreator.GetTypeDefinitions();
+		string[] keys = typeDefinitions.GetAllKeys();
 		foreach (var key in keys)
 		{
-			var row = _typeDefinitions.GetRow<DataTableRow_ProductTypeTable>(key);
+			var row = typeDefinitions.GetRow<DataTableRow_ProductTypeTable>(key);
 
 			if (row.Type == type)
 			{

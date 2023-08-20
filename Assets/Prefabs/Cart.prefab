@@ -410,6 +410,23 @@ MonoBehaviour:
       m_Action: Brake
       m_Flags: 0
     m_Flags: 0
+  grabAction:
+    m_Name: Grab
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 6da15be5-9248-48e2-b4b9-866e95bcd610
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 2ce71196-34fb-440d-abf2-8cf43e9d7794
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Grab
+      m_Flags: 0
+    m_Flags: 0
 --- !u!114 &8080079801200672721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,6 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43e39bf1a2f3b754f86b5fe95058b39e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lookShelfPoint: {x: 0, y: 0.5, z: 0}
 --- !u!1 &4952783593290858253
 GameObject:
   m_ObjectHideFlags: 0

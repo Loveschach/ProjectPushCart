@@ -14,10 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Rows:
   - rid: 3803732184768184321
+  - rid: 3803732346814857216
+  - rid: 3803732346814857217
   - rid: 3803732184768184322
   - rid: 3803732185726058499
-  - rid: 3803732184768184324
+  - rid: 3803732346814857218
+  - rid: 3803732346814857219
   - rid: 3803732184768184325
+  - rid: 3803732184768184324
+  - rid: 3803732344663965702
+  - rid: 3803732344663965703
+  - rid: 3803732344663965704
+  - rid: 3803732344663965705
+  - rid: 3803732344663965706
+  - rid: 3803732344663965707
+  - rid: 3803732344663965708
+  - rid: 3803732344663965709
+  - rid: 3803732344663965710
+  - rid: 3803732344663965711
   references:
     version: 2
     RefIds:
@@ -29,7 +43,7 @@ MonoBehaviour:
         Description: Milk with blue label
         Type: 1
         LabelTexture: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
-        ProductColor: {r: 0, g: 0.14186478, b: 1, a: 1}
+        ProductColor: {r: 0.4000979, g: 0.45149356, b: 0.764151, a: 1}
         Odds: 1
     - rid: 3803732184768184322
       type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
@@ -39,8 +53,8 @@ MonoBehaviour:
         Description: Milk with purple label
         Type: 1
         LabelTexture: {fileID: 0}
-        ProductColor: {r: 0.3584906, g: 0.015218933, b: 0.3302211, a: 0}
-        Odds: 2
+        ProductColor: {r: 0.8679245, g: 0.55268776, b: 0.8425607, a: 0}
+        Odds: 0.5
     - rid: 3803732184768184324
       type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
       data:
@@ -55,11 +69,11 @@ MonoBehaviour:
       type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
       data:
         Key: Key_4
-        Name: Purple Milk
-        Description: Gallon of milk witha purple label
-        Type: 3
+        Name: Green Milk Quart
+        Description: 
+        Type: 2
         LabelTexture: {fileID: 0}
-        ProductColor: {r: 1, g: 0, b: 0.91764706, a: 0}
+        ProductColor: {r: 0.0627451, g: 1, b: 0, a: 0}
         Odds: 0.5
     - rid: 3803732185726058499
       type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
@@ -69,5 +83,145 @@ MonoBehaviour:
         Description: Milk with purple label
         Type: 2
         LabelTexture: {fileID: 0}
-        ProductColor: {r: 0.35686275, g: 0.015686275, b: 0.32941177, a: 0}
+        ProductColor: {r: 0.7830189, g: 0.30655926, b: 0.74728453, a: 0}
         Odds: 1
+    - rid: 3803732344663965702
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_5
+        Name: Motherloaf Bread
+        Description: Load of Bread
+        Type: 4
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0.8018868, g: 0.39749563, b: 0.003782494, a: 0}
+        Odds: 1
+    - rid: 3803732344663965703
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_6
+        Name: Wheat & Chaff Bread
+        Description: Loaf of wheat bread
+        Type: 4
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 1, g: 0.7869924, b: 0.13679248, a: 0}
+        Odds: 1
+    - rid: 3803732344663965704
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_7
+        Name: Scranton Paper, Towels
+        Description: Paper Towel, Single
+        Type: 5
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0.08530616, g: 0.46421307, b: 0.6698113, a: 0}
+        Odds: 1
+    - rid: 3803732344663965705
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_8
+        Name: 0.5-Ply Toilet Paper
+        Description: Very scratchy toilet paper
+        Type: 6
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0.46524566, g: 0.7983733, b: 0.8018868, a: 0}
+        Odds: 0.5
+    - rid: 3803732344663965706
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_9
+        Name: Window Cleaner
+        Description: 
+        Type: 7
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0, g: 0, b: 0, a: 0}
+        Odds: 1
+    - rid: 3803732344663965707
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_10
+        Name: Countertop Cleaner
+        Description: 
+        Type: 7
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0, g: 0, b: 0, a: 0}
+        Odds: 1
+    - rid: 3803732344663965708
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_11
+        Name: Tile Cleaner
+        Description: 
+        Type: 7
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0.7924528, g: 0.5413019, b: 0.45229617, a: 0}
+        Odds: 1
+    - rid: 3803732344663965709
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_12
+        Name: You Know Which Soda
+        Description: Cola
+        Type: 8
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0.89411765, g: 0.09011215, b: 0.09011215, a: 0}
+        Odds: 1
+    - rid: 3803732344663965710
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_13
+        Name: Lemolime
+        Description: 
+        Type: 8
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0.59501064, g: 0.990566, b: 0.2663314, a: 0}
+        Odds: 1
+    - rid: 3803732344663965711
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_14
+        Name: Root Beer
+        Description: 
+        Type: 8
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0.2264151, g: 0.05898582, b: 0, a: 0}
+        Odds: 1
+    - rid: 3803732346814857216
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_15
+        Name: Moo Moo Milk Quart
+        Description: 
+        Type: 2
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0.30562478, g: 0.3525765, b: 0.6415094, a: 1}
+        Odds: 1
+    - rid: 3803732346814857217
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_16
+        Name: Moo Moo Milk Gallon
+        Description: 
+        Type: 3
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0.26432896, g: 0.30650342, b: 0.5660378, a: 1}
+        Odds: 1
+    - rid: 3803732346814857218
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_17
+        Name: Galaxy Milk Gallon
+        Description: 
+        Type: 3
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0.78431374, g: 0.30588236, b: 0.7490196, a: 0}
+        Odds: 0.7
+    - rid: 3803732346814857219
+      type: {class: DataTableRow_StoreInventory, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_18
+        Name: Green Milk
+        Description: 
+        Type: 1
+        LabelTexture: {fileID: 0}
+        ProductColor: {r: 0.0627451, g: 1, b: 0, a: 0}
+        Odds: 0.4

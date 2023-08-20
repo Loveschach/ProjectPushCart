@@ -45,8 +45,7 @@ public class TriggerUI : MonoBehaviour
     {
         inventory.text = "Inventory\n---------\n";
 
-        var HackSpawner = GameObject.FindFirstObjectByType<ProductSpawner>();
-        DataTable_StoreInventory storeInventory = HackSpawner._inventory;
+        DataTable_StoreInventory storeInventory = StoreCreator.GetStoreInventory();
 
         foreach (var productData in cartInventory)
         {

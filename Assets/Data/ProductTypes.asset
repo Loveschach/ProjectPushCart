@@ -16,6 +16,12 @@ MonoBehaviour:
   - rid: 3803732189435396096
   - rid: 3803732189435396097
   - rid: 3803732189435396098
+  - rid: 3803732344663965696
+  - rid: 3803732344663965697
+  - rid: 3803732344663965698
+  - rid: 3803732344663965699
+  - rid: 3803732344663965700
+  - rid: 3803732344663965701
   references:
     version: 2
     RefIds:
@@ -24,7 +30,7 @@ MonoBehaviour:
       data:
         Key: Key_0
         Type: 1
-        GameObject: {fileID: 919132149155446097, guid: e66215838c4ae1b4f9da535bc2910326, type: 3}
+        GameObject: {fileID: 919132149155446097, guid: a5804c7a0c5aea54d9456becd5085d94, type: 3}
         WidthUnits: 1
         HeightUnits: 1
     - rid: 3803732189435396097
@@ -32,7 +38,7 @@ MonoBehaviour:
       data:
         Key: Key_1
         Type: 2
-        GameObject: {fileID: 919132149155446097, guid: c517c3295ed7d7542b3f0b1e1da292ec, type: 3}
+        GameObject: {fileID: 919132149155446097, guid: c9adfa9c0d8a8c2458f212ec28a30d62, type: 3}
         WidthUnits: 1
         HeightUnits: 2
     - rid: 3803732189435396098
@@ -40,6 +46,54 @@ MonoBehaviour:
       data:
         Key: Key_2
         Type: 3
-        GameObject: {fileID: 919132149155446097, guid: 62368f6a4ee61a246bbdbcde3ffcf4b7, type: 3}
+        GameObject: {fileID: 919132149155446097, guid: 456419fc0b635e94e8f6e6872f9c59be, type: 3}
+        WidthUnits: 2
+        HeightUnits: 3
+    - rid: 3803732344663965696
+      type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_3
+        Type: 4
+        GameObject: {fileID: 919132149155446097, guid: 08fb11094f108ff4fb5637a5b470fbf2, type: 3}
+        WidthUnits: 2
+        HeightUnits: 2
+    - rid: 3803732344663965697
+      type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_4
+        Type: 5
+        GameObject: {fileID: 919132149155446097, guid: d47da7fcf5282dd46814741cf78ab981, type: 3}
+        WidthUnits: 2
+        HeightUnits: 3
+    - rid: 3803732344663965698
+      type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_5
+        Type: 6
+        GameObject: {fileID: 919132149155446097, guid: 9d26f55c6329bd94ea8e84b8741a7e00, type: 3}
+        WidthUnits: 4
+        HeightUnits: 3
+    - rid: 3803732344663965699
+      type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_6
+        Type: 8
+        GameObject: {fileID: 919132149155446097, guid: 7b6424e2c368cb7419acc7773dcce000, type: 3}
+        WidthUnits: 3
+        HeightUnits: 1
+    - rid: 3803732344663965700
+      type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_7
+        Type: 9
+        GameObject: {fileID: 919132149155446097, guid: ed73ceb759e6d6948b3f098e1902be84, type: 3}
+        WidthUnits: 1
+        HeightUnits: 1
+    - rid: 3803732344663965701
+      type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_8
+        Type: 7
+        GameObject: {fileID: 919132149155446097, guid: 766c2f953b6bb134591c63a820eda1e2, type: 3}
         WidthUnits: 2
         HeightUnits: 3
