@@ -261,7 +261,7 @@ public class ProductSpawner : MonoBehaviour
 		Vector3 productPos = transform.position;
 		
 		// Line it up with the front of the shelf
-		productPos -= _shelf.transform.forward * (StoreCreator.GridScale * 0.5f);
+		productPos -= _shelf.transform.forward * (StoreCreator.GridScale * 0.5f) * _shelf.transform.localScale.z;
 
 		int productWidth = -1;
 		int lastProductWidth = -1;
@@ -295,7 +295,7 @@ public class ProductSpawner : MonoBehaviour
 					for (int j = 0, loopCount = 0; j < _maxDepth && loopCount < 2; j += typeDefinition.DepthUnits, ++loopCount)
 					{
 						Vector3 thisProductPos = productPos;
-						thisProductPos += _shelf.transform.forward * -(StoreCreator.GridScale + StoreCreator.GridGap) * j;
+						thisProductPos += _shelf.transform.forward * -(StoreCreator.GridScale + StoreCreator.GridGap) * j * _shelf.transform.localScale.z;
 
 						float amountRotation = UnityEngine.Random.Range(_rotationOffsetMin, _rotationOffsetMax);
 
