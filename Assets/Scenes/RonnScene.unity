@@ -120,6 +120,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &113574430
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.7043
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3908
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1001 &135047878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -317,6 +374,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd7f8c930c18af04682ca23d8e48f875, type: 3}
+--- !u!1001 &191177160
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.228
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3908
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1001 &226883150
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -575,6 +689,63 @@ RectTransform:
   m_AnchoredPosition: {x: 207, y: -103.7}
   m_SizeDelta: {x: 296.7568, y: 94.28027}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &324270859
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.914049
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (17)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1 &327885136 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 33bc6e95c2b2b0b48bc39827d7ec0239, type: 3}
@@ -585,6 +756,63 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 33bc6e95c2b2b0b48bc39827d7ec0239, type: 3}
   m_PrefabInstance: {fileID: 1788506979}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &409643134
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.5737996
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3908
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1 &491436163
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +894,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7809395208354642074, guid: 33bc6e95c2b2b0b48bc39827d7ec0239, type: 3}
+--- !u!1001 &556299055
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.046
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (18)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1 &556463105 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 33bc6e95c2b2b0b48bc39827d7ec0239, type: 3}
@@ -770,6 +1055,120 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7809395208354642074, guid: 33bc6e95c2b2b0b48bc39827d7ec0239, type: 3}
+--- !u!1001 &563117535
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.914049
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3908
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+--- !u!1001 &614070684
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.836251
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3908
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1 &644007643
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,6 +1324,177 @@ Transform:
   m_Children: []
   m_Father: {fileID: 285863358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &864543501
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.1765003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+--- !u!1001 &891649744
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.836251
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+--- !u!1001 &900809580
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.4418488
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (19)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1 &902840100
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,6 +1799,120 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962790546}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &968256754
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.7043
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+--- !u!1001 &1018978395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.359951
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1001 &1095866029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1306,6 +1990,120 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 33bc6e95c2b2b0b48bc39827d7ec0239, type: 3}
   m_PrefabInstance: {fileID: 1095866029}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1140124679
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.965549
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (22)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+--- !u!1001 &1200340368
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.4418488
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3908
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1 &1215280666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1425,6 +2223,63 @@ MonoBehaviour:
   time: {fileID: 0}
   inventory: {fileID: 308029454}
   GAME_LENGTH: 180
+--- !u!1001 &1236260924
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.0975
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (21)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1001 &1257591055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1524,6 +2379,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7809395208354642074, guid: 33bc6e95c2b2b0b48bc39827d7ec0239, type: 3}
+--- !u!1001 &1466101758
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.5737996
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (20)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1001 &1575584167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1628,6 +2540,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7809395208354642074, guid: 33bc6e95c2b2b0b48bc39827d7ec0239, type: 3}
+--- !u!1001 &1707257800
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.046
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3908
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1001 &1742780247
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1754,6 +2723,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7809395208354642074, guid: 33bc6e95c2b2b0b48bc39827d7ec0239, type: 3}
+--- !u!1001 &1759973252
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.359951
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3908
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1 &1768565649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1902,6 +2928,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7809395208354642074, guid: 33bc6e95c2b2b0b48bc39827d7ec0239, type: 3}
+--- !u!1001 &1819547851
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.1765003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3908
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1 &1830531477
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,6 +3077,120 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1847541962
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.308451
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+--- !u!1001 &1863671927
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.965549
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3908
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1 &1880921627
 GameObject:
   m_ObjectHideFlags: 0
@@ -2204,6 +3401,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940578623}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1988710376
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.308451
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.3908
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1 &2086418790
 GameObject:
   m_ObjectHideFlags: 0
@@ -7032,6 +8286,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!1001 &2086759734
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.228
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2333
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
+      propertyPath: m_Name
+      value: cerealbox (23)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6bc2c50f4c4cbf14d8f8997cd5fd76d9, type: 3}
 --- !u!1 &2095331474
 GameObject:
   m_ObjectHideFlags: 0
@@ -7063,7 +8374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _length: 150
   _width: 35
-  _aisleType: 6
+  _aisleType: 5
   _aisleSignPrefab: {fileID: 4018117392019557737, guid: 820a5a875bb7d77458c0dbe58321f313, type: 3}
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &2095331476
@@ -7157,3 +8468,26 @@ SceneRoots:
   - {fileID: 1768565651}
   - {fileID: 644007645}
   - {fileID: 6267466715528845428}
+  - {fileID: 1759973252}
+  - {fileID: 614070684}
+  - {fileID: 113574430}
+  - {fileID: 1988710376}
+  - {fileID: 1819547851}
+  - {fileID: 563117535}
+  - {fileID: 1707257800}
+  - {fileID: 1200340368}
+  - {fileID: 409643134}
+  - {fileID: 1863671927}
+  - {fileID: 191177160}
+  - {fileID: 1018978395}
+  - {fileID: 2086759734}
+  - {fileID: 1140124679}
+  - {fileID: 1236260924}
+  - {fileID: 1466101758}
+  - {fileID: 900809580}
+  - {fileID: 968256754}
+  - {fileID: 891649744}
+  - {fileID: 556299055}
+  - {fileID: 324270859}
+  - {fileID: 864543501}
+  - {fileID: 1847541962}

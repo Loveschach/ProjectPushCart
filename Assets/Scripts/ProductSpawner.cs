@@ -136,7 +136,7 @@ public class ProductSpawner : MonoBehaviour
 	public float _rotationOffsetMin = -5.0f;
 	public float _rotationOffsetMax = 5.0f;
 
-	public float _triggerDepth = 2.0f;
+	public float _triggerDepth = 0.8f;
 	public float _triggerHeight = 4.0f;
 
 	private Vector3 _spawnDirection = Vector3.right;
@@ -180,9 +180,11 @@ public class ProductSpawner : MonoBehaviour
 				break;
 
 			case AisleType.CannedGoods:
+				_types.Add(ProductTypes.CannedGood);
 				break;
 
 			case AisleType.Cereal:
+				_types.Add(ProductTypes.Cereal);
 				break;
 
 			case AisleType.Cleaning:
@@ -297,7 +299,7 @@ public class ProductSpawner : MonoBehaviour
 					for (int j = 0, loopCount = 0; j < _maxDepth && loopCount < 2; j += typeDefinition.DepthUnits, ++loopCount)
 					{
 						Vector3 thisProductPos = productPos;
-						thisProductPos += _shelf.transform.forward * -(StoreCreator.GridScale + StoreCreator.GridGap) * j * _shelf.transform.localScale.z;
+						thisProductPos += _shelf.transform.forward * -(StoreCreator.GridScale + StoreCreator.GridGap) * (j + (typeDefinition.DepthUnits - 1) * 0.5f) * _shelf.transform.localScale.z;
 
 						float amountRotation = UnityEngine.Random.Range(_rotationOffsetMin, _rotationOffsetMax);
 
@@ -305,7 +307,7 @@ public class ProductSpawner : MonoBehaviour
 						if (_shelf.transform.localScale.z < 0)
 							amountRotation += 180;
 
-							var productRotation = _shelf.transform.rotation * Quaternion.AngleAxis(amountRotation, transform.up);
+						var productRotation = _shelf.transform.rotation * Quaternion.AngleAxis(amountRotation, transform.up);
 						GameObject newProduct = Instantiate(typeDefinition.GameObject, thisProductPos, productRotation);
 						newProduct.transform.localScale = new Vector3(StoreCreator.ProductScale, StoreCreator.ProductScale, StoreCreator.ProductScale);
 
@@ -318,6 +320,11 @@ public class ProductSpawner : MonoBehaviour
 						ProductData productData = newProduct.AddComponent(typeof(ProductData)) as ProductData;
 						productData.SetData(row.Key);
 
+						if (row.Stackable)
+						{
+
+						}
+						
 						if (j == 0)
 						{
 							productsOfType.Add(newProduct);

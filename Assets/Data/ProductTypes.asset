@@ -22,6 +22,7 @@ MonoBehaviour:
   - rid: 3803732344663965699
   - rid: 3803732344663965700
   - rid: 3803732344663965701
+  - rid: 3803732365289455616
   references:
     version: 2
     RefIds:
@@ -103,6 +104,15 @@ MonoBehaviour:
         Key: Key_8
         Type: 7
         GameObject: {fileID: 919132149155446097, guid: 766c2f953b6bb134591c63a820eda1e2, type: 3}
+        WidthUnits: 2
+        HeightUnits: 3
+        DepthUnits: 1
+    - rid: 3803732365289455616
+      type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
+      data:
+        Key: Key_9
+        Type: 10
+        GameObject: {fileID: 919132149155446097, guid: e68694c148c5795469643a91ec46172e, type: 3}
         WidthUnits: 2
         HeightUnits: 3
         DepthUnits: 1
