@@ -21,47 +21,60 @@ public enum AisleType
 public class StoreAisle : MonoBehaviour
 {
     public int _length = 1;
-    public int _width = 1;
+    public int _aisleWidth = 30;
     public AisleType _aisleType = AisleType.Invalid;
+
+    public static Color[] DebugAisleColors = 
+    { 
+        new Color(1,0,0,0.25f),
+        new Color(1,1,0,0.25f),
+        new Color(0,1,1,0.25f),
+        new Color(0,0,1,0.25f),
+        new Color(1,0,1,0.25f),
+    };
 
     public GameObject _aisleSignPrefab;
 
     public GameObject _shelfPrefab;
+    private StoreShelfConfig _storeShelfConfig;
+    private int _shelfCount = 0;
 
     List<GameObject> _leftShelves = new List<GameObject>();
     List<GameObject> _rightShelves = new List<GameObject>();
 
-    //private 
+	private void OnValidate()
+    {
+        _storeShelfConfig = _shelfPrefab.GetComponent<StoreShelfConfig>();
 
-    // Start is called before the first frame update
-    void Start()
+        _shelfCount = _length / _storeShelfConfig._unitTotalLength;
+        if (_length % _storeShelfConfig._unitTotalLength != 0)
+        {
+            // To account for "rounding up" we add one shelf if this isnt a clean division
+            _shelfCount++;
+        }
+    }
+
+	// Start is called before the first frame update
+	void Start()
     {
         StoreShelf storeShelf = _shelfPrefab.GetComponent<StoreShelf>();
-        StoreShelfConfig storeShelfConfig = _shelfPrefab.GetComponent<StoreShelfConfig>();
-
-        int shelfCount = _length / storeShelfConfig._unitTotalLength;
-        if(_length % storeShelfConfig._unitTotalLength != 0)
-		{
-            // To account for "rounding up" we add one shelf if this isnt a clean division
-            shelfCount++;
-        }
 
         // Reset length to be round
-        _length = shelfCount * storeShelfConfig._unitTotalLength;
+        //_length = _shelfCount * _storeShelfConfig._unitTotalLength;
 
         Vector3 pos = transform.position;
-        for (int i = 0; i < shelfCount; ++i)
+        for (int i = 0; i < _shelfCount; ++i)
         {
             GameObject LeftShelf = Instantiate(_shelfPrefab, pos, transform.rotation);
             _leftShelves.Add(LeftShelf);
 
-            var rightSidePos = pos + (transform.forward * _width * StoreCreator.GridScale);
-            var rightSideRotation = transform.rotation * Quaternion.AngleAxis(180, transform.up);
+            var rightSidePos = GetRightShelfPos(pos);
+
             GameObject RightShelf = Instantiate(_shelfPrefab, rightSidePos, transform.rotation);
             RightShelf.transform.localScale = new Vector3(RightShelf.transform.localScale.x, RightShelf.transform.localScale.y, -RightShelf.transform.localScale.z);
             _rightShelves.Add(RightShelf);
 
-            if(i == 0 || i == (shelfCount - 1))
+            if (i == 0 || i == (_shelfCount - 1))
             {
                 Vector3 signPos = pos + ((rightSidePos - pos) * 0.5f);
                 signPos += Vector3.up * 2.3f;
@@ -72,7 +85,7 @@ public class StoreAisle : MonoBehaviour
                 aisleSignComponent.SetText(_aisleType);
             }
 
-            pos += transform.right * -storeShelfConfig._unitTotalLength * StoreCreator.GridScale;
+            pos = GetAdjacentShelfPos(pos);
         }
 
         CreateProducts(_leftShelves[0], storeShelf.ShelfData);
@@ -81,7 +94,7 @@ public class StoreAisle : MonoBehaviour
     }
 
     void CreateProducts(GameObject Shelf, List<StoreShelfData> ShelfData)
-	{
+    {
 
         foreach (var shelfData in ShelfData)
         {
@@ -101,15 +114,39 @@ public class StoreAisle : MonoBehaviour
         }
     }
 
+    Vector3 GetRightShelfPos(Vector3 leftShelfPos)
+    {
+        return leftShelfPos + (transform.forward * _aisleWidth * StoreCreator.GridScale);
+    }
+
+    Vector3 GetAdjacentShelfPos(Vector3 shelfPos)
+    {
+        return shelfPos + transform.right * -_storeShelfConfig._unitTotalLength * StoreCreator.GridScale;
+    }
+
     // Update is called once per frame
     void Update()
     {
         
     }
 
-	private void OnDrawGizmos()
-	{
-        
+    private void OnDrawGizmos()
+    {
+        if (!Application.isPlaying)
+        {
+            var shelfMesh = _shelfPrefab.GetComponentInChildren<MeshFilter>();
 
+            var shelfPos = transform.position;
+            Gizmos.color = Color.grey;
+            for (int i = 0; i < _shelfCount; ++i)
+            {
+                Gizmos.DrawMesh(shelfMesh.sharedMesh, shelfPos, transform.rotation);
+
+                var rightShelfRotation = transform.rotation * Quaternion.AngleAxis(180, transform.up);
+                Gizmos.DrawMesh(shelfMesh.sharedMesh, GetRightShelfPos(shelfPos), rightShelfRotation);
+
+                shelfPos = GetAdjacentShelfPos(shelfPos);
+            }
+        }
     }
 }

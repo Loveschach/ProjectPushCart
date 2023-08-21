@@ -843,8 +843,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _length: 150
-  _width: 35
+  _aisleWidth: 35
   _aisleType: 7
+  debugAisleColors: []
   _aisleSignPrefab: {fileID: 4018117392019557737, guid: 820a5a875bb7d77458c0dbe58321f313, type: 3}
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &491436165
@@ -1199,8 +1200,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _length: 150
-  _width: 35
+  _aisleWidth: 35
   _aisleType: 3
+  debugAisleColors: []
   _aisleSignPrefab: {fileID: 4018117392019557737, guid: 820a5a875bb7d77458c0dbe58321f313, type: 3}
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &644007645
@@ -2810,8 +2812,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _length: 150
-  _width: 35
+  _aisleWidth: 35
   _aisleType: 1
+  debugAisleColors: []
   _aisleSignPrefab: {fileID: 4018117392019557737, guid: 820a5a875bb7d77458c0dbe58321f313, type: 3}
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &1768565651
@@ -8373,8 +8376,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _length: 150
-  _width: 35
-  _aisleType: 5
+  _aisleWidth: 35
+  _aisleType: 6
+  debugAisleColors:
+  - {r: 1, g: 0.2554821, b: 0, a: 0}
+  - {r: 1, g: 0, b: 0.5117955, a: 0}
+  - {r: 0.15861766, g: 0.12281951, b: 0.2264151, a: 0}
+  - {r: 1, g: 0.89133024, b: 0, a: 0}
+  - {r: 0, g: 1, b: 0.5643053, a: 0}
+  - {r: 0, g: 0.81251574, b: 1, a: 0}
+  - {r: 0.12156863, g: 0.22745098, b: 0.1966453, a: 0}
+  - {r: 0.4339623, g: 0.16101685, b: 0.10030261, a: 0}
+  - {r: 0, g: 0.11423255, b: 0.9811321, a: 0}
+  - {r: 0.5660378, g: 0.33107835, b: 0.18956926, a: 0}
+  - {r: 0.53206664, g: 0.1882353, b: 0.5647059, a: 0}
+  - {r: 0, g: 1, b: 0.26801538, a: 0}
+  - {r: 0.9622642, g: 0.96173626, b: 0.78524387, a: 0}
   _aisleSignPrefab: {fileID: 4018117392019557737, guid: 820a5a875bb7d77458c0dbe58321f313, type: 3}
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &2095331476
