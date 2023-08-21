@@ -31,12 +31,14 @@ public class ProductGrabTrigger : MonoBehaviour
 
 	public void UpdatePlayerInTrigger(Collider other)
 	{
-		// HACK FOR NOW
-		if (_shelfType != ShelfType.Middle)
-			return;
-
 		var cartInventory = other.GetComponent<CartInventory>();
 		var cartController = other.GetComponent<CartController>();
+
+		if(cartController.ShelfToGrab != _shelfType)
+		{
+			return;
+		}
+
 		var productData = GetComponent<ProductData>();
 		float productWidth = _typeDefinition.WidthUnits * StoreCreator.GridScale;
 

@@ -58,6 +58,12 @@ public class CartController : MonoBehaviour
         set { _grabbing = value; }  // set method
     }
 
+    ShelfType _shelfToGrab = ShelfType.Middle;
+    public ShelfType ShelfToGrab   // property
+    {
+        get { return _shelfToGrab; }   // get method
+        set { _shelfToGrab = value; }  // set method
+    }
 
     private void Start()
     {
@@ -236,5 +242,7 @@ public class CartController : MonoBehaviour
         }
 
         _grabbing = grabAction.ReadValue<float>() > 0;
+        // TODO: Somehow you'd pick which self is being used
+        _shelfToGrab = ShelfType.Middle;
     }
 }
