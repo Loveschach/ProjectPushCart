@@ -317,6 +317,11 @@ public class ProductSpawner : MonoBehaviour
 
 						productRenderer.enabled = j > 0 || UnityEngine.Random.Range(0.0f, 1.0f) > 0.17f;
 
+						if(productRenderer.enabled)
+						{
+							StoreCreator.AddProduct(row.Key, 1);
+						}
+
 						ProductData productData = newProduct.AddComponent(typeof(ProductData)) as ProductData;
 						productData.SetData(row.Key);
 

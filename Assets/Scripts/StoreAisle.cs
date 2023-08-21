@@ -33,8 +33,6 @@ public class StoreAisle : MonoBehaviour
         new Color(1,0,1,0.25f),
     };
 
-    public GameObject _aisleSignPrefab;
-
     public GameObject _shelfPrefab;
     private StoreShelfConfig _storeShelfConfig;
     private int _shelfCount = 0;
@@ -42,7 +40,7 @@ public class StoreAisle : MonoBehaviour
     List<GameObject> _leftShelves = new List<GameObject>();
     List<GameObject> _rightShelves = new List<GameObject>();
 
-	private void OnValidate()
+    private void OnValidate()
     {
         _storeShelfConfig = _shelfPrefab.GetComponent<StoreShelfConfig>();
 
@@ -80,7 +78,7 @@ public class StoreAisle : MonoBehaviour
                 signPos += Vector3.up * 2.3f;
                 float frontOfAisleDirection = i == 0 ? 1 : -1;
                 signPos += transform.right * 0.5f * frontOfAisleDirection;
-                GameObject aisleSign1 = Instantiate(_aisleSignPrefab, signPos, transform.rotation);
+                GameObject aisleSign1 = Instantiate(StoreCreator.GetAisleSignPrefab(), signPos, transform.rotation);
                 var aisleSignComponent = aisleSign1.GetComponent<AisleSign>();
                 aisleSignComponent.SetText(_aisleType);
             }
@@ -137,7 +135,7 @@ public class StoreAisle : MonoBehaviour
             var shelfMesh = _shelfPrefab.GetComponentInChildren<MeshFilter>();
 
             var shelfPos = transform.position;
-            Gizmos.color = Color.grey;
+            Gizmos.color = new Color(0.0f, 0.0f, 0.0f, 0.25f);
             for (int i = 0; i < _shelfCount; ++i)
             {
                 Gizmos.DrawMesh(shelfMesh.sharedMesh, shelfPos, transform.rotation);

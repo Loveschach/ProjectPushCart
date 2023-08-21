@@ -845,8 +845,6 @@ MonoBehaviour:
   _length: 150
   _aisleWidth: 35
   _aisleType: 7
-  debugAisleColors: []
-  _aisleSignPrefab: {fileID: 4018117392019557737, guid: 820a5a875bb7d77458c0dbe58321f313, type: 3}
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &491436165
 Transform:
@@ -857,7 +855,7 @@ Transform:
   m_GameObject: {fileID: 491436163}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.19134218, z: -0, w: 0.9815234}
-  m_LocalPosition: {x: 7.87, y: 0.126, z: 3.545}
+  m_LocalPosition: {x: 7.911, y: 0.126, z: 3.647}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1202,8 +1200,6 @@ MonoBehaviour:
   _length: 150
   _aisleWidth: 35
   _aisleType: 3
-  debugAisleColors: []
-  _aisleSignPrefab: {fileID: 4018117392019557737, guid: 820a5a875bb7d77458c0dbe58321f313, type: 3}
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &644007645
 Transform:
@@ -1214,7 +1210,7 @@ Transform:
   m_GameObject: {fileID: 644007643}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.19134218, z: -0, w: 0.9815234}
-  m_LocalPosition: {x: 9.489, y: 0.126, z: 7.539}
+  m_LocalPosition: {x: 9.556, y: 0.126, z: 7.703}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2814,8 +2810,6 @@ MonoBehaviour:
   _length: 150
   _aisleWidth: 35
   _aisleType: 1
-  debugAisleColors: []
-  _aisleSignPrefab: {fileID: 4018117392019557737, guid: 820a5a875bb7d77458c0dbe58321f313, type: 3}
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &1768565651
 Transform:
@@ -2826,7 +2820,7 @@ Transform:
   m_GameObject: {fileID: 1768565649}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.19134218, z: -0, w: 0.9815234}
-  m_LocalPosition: {x: 8.684, y: 0.126, z: 5.553}
+  m_LocalPosition: {x: 8.734, y: 0.126, z: 5.675}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8378,21 +8372,6 @@ MonoBehaviour:
   _length: 150
   _aisleWidth: 35
   _aisleType: 6
-  debugAisleColors:
-  - {r: 1, g: 0.2554821, b: 0, a: 0}
-  - {r: 1, g: 0, b: 0.5117955, a: 0}
-  - {r: 0.15861766, g: 0.12281951, b: 0.2264151, a: 0}
-  - {r: 1, g: 0.89133024, b: 0, a: 0}
-  - {r: 0, g: 1, b: 0.5643053, a: 0}
-  - {r: 0, g: 0.81251574, b: 1, a: 0}
-  - {r: 0.12156863, g: 0.22745098, b: 0.1966453, a: 0}
-  - {r: 0.4339623, g: 0.16101685, b: 0.10030261, a: 0}
-  - {r: 0, g: 0.11423255, b: 0.9811321, a: 0}
-  - {r: 0.5660378, g: 0.33107835, b: 0.18956926, a: 0}
-  - {r: 0.53206664, g: 0.1882353, b: 0.5647059, a: 0}
-  - {r: 0, g: 1, b: 0.26801538, a: 0}
-  - {r: 0.9622642, g: 0.96173626, b: 0.78524387, a: 0}
-  _aisleSignPrefab: {fileID: 4018117392019557737, guid: 820a5a875bb7d77458c0dbe58321f313, type: 3}
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &2095331476
 Transform:
@@ -8461,6 +8440,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6324292423580963875, guid: 91ac777a423172f4c908e4e1137fbc3e, type: 3}
+      propertyPath: AisleSignPrefab
+      value: 
+      objectReference: {fileID: 4018117392019557737, guid: 820a5a875bb7d77458c0dbe58321f313, type: 3}
     - target: {fileID: 6324292423580963875, guid: 91ac777a423172f4c908e4e1137fbc3e, type: 3}
       propertyPath: _aisleSignPrefab
       value: 
