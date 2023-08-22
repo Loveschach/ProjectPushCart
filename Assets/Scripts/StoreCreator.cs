@@ -32,6 +32,8 @@ public class StoreCreator : MonoBehaviour
     public DataTable_StoreInventory Inventory;
 	public DataTable_ProductTypeTable TypeDefinitions;
 
+    static bool StoreCreated = false;
+
 	public static DataTable_StoreInventory GetStoreInventory()
 	{
         var storeCreatorObject = FindFirstObjectByType<StoreCreator>();
@@ -48,7 +50,7 @@ public class StoreCreator : MonoBehaviour
         return storeCreatorObject.AisleSignPrefab;
     }
 
-    public static void AddProduct(string key, int amount)
+    public static void AddStockedItem(string key, int amount)
     {   
         bool productInInventory = StockedItems.ContainsKey(key);
 
@@ -60,27 +62,44 @@ public class StoreCreator : MonoBehaviour
         {
             StockedItems.Add(key, amount);
         }
-
-        //OnInventoryChange.Invoke(_inventory);
     }
-    public static void ClearInventory()
+    public static void ClearStockedItems()
     {
         StockedItems.Clear();
-
-        //OnInventoryChange.Invoke(_inventory);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        ClearInventory();
+        StoreCreated = false;
+        ClearStockedItems();
+        ShoppingList.ClearList();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!StoreCreated)
+		{
+            StoreCreated = true;
 
+            StoreAisle[] aisles = FindObjectsByType<StoreAisle>(FindObjectsSortMode.None);
+            foreach( var aisle in aisles)
+			{
+                aisle.CreateAisle();
+            }
+
+            StartCoroutine(StartMiniGame());
+        }
     }
+
+    IEnumerator StartMiniGame()
+    {
+        yield return new WaitForSeconds(3);
+
+        ShoppingList.GenerateList();
+    }
+
     private void OnValidate()
     {
         GridScale = MathF.Max(GridScale, 0.001f);

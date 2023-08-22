@@ -24,8 +24,8 @@ public class StoreAisle : MonoBehaviour
     public int _aisleWidth = 30;
     public AisleType _aisleType = AisleType.Invalid;
 
-    public static Color[] DebugAisleColors = 
-    { 
+    public static Color[] DebugAisleColors =
+    {
         new Color(1,0,0,0.25f),
         new Color(1,1,0,0.25f),
         new Color(0,1,1,0.25f),
@@ -52,9 +52,13 @@ public class StoreAisle : MonoBehaviour
         }
     }
 
-	// Start is called before the first frame update
-	void Start()
+    // Start is called before the first frame update
+    void Start()
     {
+    }
+
+    public void CreateAisle()
+    { 
         StoreShelf storeShelf = _shelfPrefab.GetComponent<StoreShelf>();
 
         // Reset length to be round
@@ -93,14 +97,11 @@ public class StoreAisle : MonoBehaviour
 
     void CreateProducts(GameObject Shelf, List<StoreShelfData> ShelfData)
     {
-
         foreach (var shelfData in ShelfData)
         {
             // TODO: Clone support later...
             if (shelfData.IsClone)
                 continue;
-            //if (shelfData.Enum != ShelfType.Middle)
-            //    continue;
 
             var gameObject = new GameObject();
             var newComponent = gameObject.AddComponent<ProductSpawner>();

@@ -8,6 +8,7 @@ public class TriggerUI : MonoBehaviour
     public TMP_Text score;
     public TMP_Text time;
     public TMP_Text inventory;
+    public TMP_Text shoppingList;
     public float GAME_LENGTH = 180;
     int currentScore = 0;
     float startTime;
@@ -18,6 +19,7 @@ public class TriggerUI : MonoBehaviour
         startTime = Time.time;
         TriggerManager.hitFoodTrigger.AddListener(UpdateScore);
         CartInventory.OnInventoryChange.AddListener(UpdateInventory);
+        ShoppingList.OnShoppingListChange.AddListener(UpdateShoppingList);
 
         if (score != null)
         {
@@ -68,6 +70,21 @@ public class TriggerUI : MonoBehaviour
             {
                 var product = storeInventory.GetRow<DataTableRow_StoreInventory>(productData.Key);
                 inventory.text += product.Name + ": " + productData.Value + "\n";
+            }
+        }
+    }
+    void UpdateShoppingList(Dictionary<string, int> list)
+    {
+        if (shoppingList != null)
+        {
+            shoppingList.text = "Shopping List\n--------------\n";
+            
+            DataTable_StoreInventory storeInventory = StoreCreator.GetStoreInventory();
+
+            foreach (var productData in list)
+            {
+                var product = storeInventory.GetRow<DataTableRow_StoreInventory>(productData.Key);
+                shoppingList.text += product.Name + ": " + productData.Value + "\n";
             }
         }
     }

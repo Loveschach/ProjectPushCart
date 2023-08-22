@@ -319,7 +319,7 @@ public class ProductSpawner : MonoBehaviour
 
 						if(productRenderer.enabled)
 						{
-							StoreCreator.AddProduct(row.Key, 1);
+							StoreCreator.AddStockedItem(row.Key, 1);
 						}
 
 						ProductData productData = newProduct.AddComponent(typeof(ProductData)) as ProductData;
