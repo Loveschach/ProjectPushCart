@@ -73,7 +73,7 @@ public class TriggerUI : MonoBehaviour
             }
         }
     }
-    void UpdateShoppingList(Dictionary<string, int> list)
+    void UpdateShoppingList(List<ShoppingListEntry> list)
     {
         if (shoppingList != null)
         {
@@ -84,7 +84,17 @@ public class TriggerUI : MonoBehaviour
             foreach (var productData in list)
             {
                 var product = storeInventory.GetRow<DataTableRow_StoreInventory>(productData.Key);
-                shoppingList.text += product.Name + ": " + productData.Value + "\n";
+
+                if (false)
+                {
+                    shoppingList.text += "<color=\"grey\">";
+                }
+                else
+                {
+                    shoppingList.text += "<color=\"white\">";
+                }
+
+                shoppingList.text += product.Name + ": " + productData.Quantity + "</color>\n";
             }
         }
     }
