@@ -844,7 +844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _length: 150
   _aisleWidth: 35
-  _aisleType: 7
+  _aisleType: 8
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &491436165
 Transform:
@@ -1199,7 +1199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _length: 150
   _aisleWidth: 35
-  _aisleType: 3
+  _aisleType: 4
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &644007645
 Transform:
@@ -2946,7 +2946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _length: 150
   _aisleWidth: 35
-  _aisleType: 1
+  _aisleType: 2
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &1768565651
 Transform:
@@ -8646,7 +8646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _length: 150
   _aisleWidth: 35
-  _aisleType: 6
+  _aisleType: 7
   _shelfPrefab: {fileID: 2730388574591782309, guid: df951a615ad0b1e40ab0c543e23f54d2, type: 3}
 --- !u!4 &2095331476
 Transform:

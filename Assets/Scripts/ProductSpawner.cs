@@ -151,7 +151,7 @@ public class ProductSpawner : MonoBehaviour
 	{
 		_shelf = shelf;
 
-		HackSetupAisle(aisleType);
+		SetupAisle(aisleType);
 
 		_shelfType = shelfType;
 		_shelfSpots = length;
@@ -159,54 +159,23 @@ public class ProductSpawner : MonoBehaviour
 		_maxHeight = maxHeight;
 	}
 
-	public bool HackSetupAisle(AisleType aisleType)
+	public bool SetupAisle(AisleType aisleType)
 	{
 		_aisleType = aisleType;
-
-		switch (_aisleType)
+		DataTable_ProductTypeTable typeDefinitions = StoreCreator.GetTypeDefinitions();
+		string[] keys = typeDefinitions.GetAllKeys();
+		foreach (var key in keys)
 		{
-			case AisleType.Baking:
-				break;
+			var row = typeDefinitions.GetRow<DataTableRow_ProductTypeTable>(key);
 
-			case AisleType.Beverages:
-				_types.Add(ProductTypes.SodaSixPack);
-				break;
-
-			case AisleType.BoxedDinners:
-				break;
-
-			case AisleType.Bread:
-				_types.Add(ProductTypes.BreadLoaf);
-				break;
-
-			case AisleType.CannedGoods:
-				_types.Add(ProductTypes.CannedGood);
-				break;
-
-			case AisleType.Cereal:
-				_types.Add(ProductTypes.Cereal);
-				break;
-
-			case AisleType.Cleaning:
-				_types.Add(ProductTypes.SprayBottle);
-				_types.Add(ProductTypes.PaperTowelSingle);
-				_types.Add(ProductTypes.ToiletPaperPack);
-				break;
-
-			case AisleType.Milk:
-				_types.Add(ProductTypes.MilkPint);
-				_types.Add(ProductTypes.MilkQuart);
-				_types.Add(ProductTypes.MilkGallon);
-				break;
-
-			case AisleType.Produce:
-				break;
-
-			case AisleType.Snacks:
-				break;
+			if (row.Aisle == _aisleType)
+			{
+				_types.Add(row.Type);
+			}
 		}
 
-		return false;
+
+		return _types.Count > 0;
 	}
 
 	// Start is called before the first frame update

@@ -35,6 +35,7 @@ MonoBehaviour:
         WidthUnits: 1
         HeightUnits: 1
         DepthUnits: 1
+        Aisle: 8
     - rid: 3803732189435396097
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -44,6 +45,7 @@ MonoBehaviour:
         WidthUnits: 1
         HeightUnits: 2
         DepthUnits: 1
+        Aisle: 8
     - rid: 3803732189435396098
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -53,6 +55,7 @@ MonoBehaviour:
         WidthUnits: 2
         HeightUnits: 3
         DepthUnits: 2
+        Aisle: 8
     - rid: 3803732344663965696
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -62,6 +65,7 @@ MonoBehaviour:
         WidthUnits: 2
         HeightUnits: 2
         DepthUnits: 3
+        Aisle: 4
     - rid: 3803732344663965697
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -71,6 +75,7 @@ MonoBehaviour:
         WidthUnits: 2
         HeightUnits: 4
         DepthUnits: 2
+        Aisle: 7
     - rid: 3803732344663965698
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -80,6 +85,7 @@ MonoBehaviour:
         WidthUnits: 4
         HeightUnits: 3
         DepthUnits: 3
+        Aisle: 7
     - rid: 3803732344663965699
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -89,6 +95,7 @@ MonoBehaviour:
         WidthUnits: 3
         HeightUnits: 2
         DepthUnits: 2
+        Aisle: 2
     - rid: 3803732344663965700
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -98,6 +105,7 @@ MonoBehaviour:
         WidthUnits: 1
         HeightUnits: 1
         DepthUnits: 1
+        Aisle: 2
     - rid: 3803732344663965701
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -107,6 +115,7 @@ MonoBehaviour:
         WidthUnits: 2
         HeightUnits: 3
         DepthUnits: 1
+        Aisle: 7
     - rid: 3803732365289455616
       type: {class: DataTableRow_ProductTypeTable, ns: , asm: Assembly-CSharp}
       data:
@@ -116,3 +125,4 @@ MonoBehaviour:
         WidthUnits: 2
         HeightUnits: 3
         DepthUnits: 1
+        Aisle: 6

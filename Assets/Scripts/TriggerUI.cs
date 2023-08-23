@@ -84,8 +84,8 @@ public class TriggerUI : MonoBehaviour
             foreach (var productData in list)
             {
                 var product = storeInventory.GetRow<DataTableRow_StoreInventory>(productData.Key);
-
-                if (false)
+                
+                if (productData.Complete)
                 {
                     shoppingList.text += "<color=\"grey\">";
                 }

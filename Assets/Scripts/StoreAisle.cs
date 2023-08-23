@@ -5,7 +5,7 @@ using UnityEngine;
 
 public enum AisleType
 {
-        Invalid = -1,
+        Invalid,
         Baking,
         Beverages,
         BoxedDinners,
