@@ -57,27 +57,19 @@ public class ShoppingList : MonoBehaviour
 
     public static UnityEvent<List<ShoppingListEntry>> OnShoppingListChange = new UnityEvent<List<ShoppingListEntry>>();
 
-    public bool IsItemComplete(int index)
-    {
-
-        return false;
-    }
     public static bool IsItemComplete(string key)
     {
-        var entry = ShopList.Find(x => x.Key.Contains(key));
-        if (entry == null)
-            return false;
-
-        // TEMP!
-        return entry.Quantity > 0;
+        return GetEntry(key).Complete;
     }
+
     public static bool IsListComplete()
 	{
         foreach(var item in ShopList)
 		{
-
-		}
-        return false;
+            if(!item.Complete)
+                return false;
+        }
+        return true;
 	}
 
     public static ShoppingListEntry GetEntry(string key)
@@ -123,15 +115,20 @@ public class ShoppingList : MonoBehaviour
         ShopList.Clear();
         OnShoppingListChange.Invoke(ShopList);
     }
-    void OnUpdateInventory(Dictionary<string, int> list)
+    void OnItemChange(string key, int quantity)
     {
-        
+        var itemOnList = GetEntry(key);
+        if (itemOnList == null)
+            return;
+
+        itemOnList.Complete = quantity >= itemOnList.Quantity;
+        OnShoppingListChange.Invoke(ShopList);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        CartInventory.OnInventoryChange.AddListener(OnUpdateInventory);
+        CartInventory.OnItemChange.AddListener(OnItemChange);
     }
 
     // Update is called once per frame

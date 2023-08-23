@@ -30,6 +30,8 @@ public class CartInventory : MonoBehaviour
 {
     public static UnityEvent<Dictionary<string, int>> OnInventoryChange = new UnityEvent<Dictionary<string, int>>();
 
+    public static UnityEvent<string, int> OnItemChange = new UnityEvent<string, int>();
+
     private Dictionary<string, int> _inventory = new Dictionary<string, int>();
 
     public Vector3 _lookShelfPoint = new Vector3(0.0f, 0.5f, 0.0f);
@@ -70,6 +72,7 @@ public class CartInventory : MonoBehaviour
             _inventory.Add(key, amount);
         }
 
+        OnItemChange.Invoke(key, _inventory[key]);
         OnInventoryChange.Invoke(_inventory);
     }
 
@@ -80,13 +83,15 @@ public class CartInventory : MonoBehaviour
             _inventory[key] -= amount;
         }
 
-
+        OnItemChange.Invoke(key, _inventory[key]);
         OnInventoryChange.Invoke(_inventory);
     }
 
     public void ClearInventory()
 	{
         _inventory.Clear();
+
+        // TODO: Item Change is NOT called
 
         OnInventoryChange.Invoke(_inventory);
     }
